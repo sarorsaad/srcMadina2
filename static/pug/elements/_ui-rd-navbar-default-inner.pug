@@ -1,0 +1,118 @@
+include ../elements/_ui-tabs-classic
+include ../elements/_widget-form-search
+include ../mixins/_rd-navbar-submenu-simple
+
+//- RD Navbar Transparent
+//- skin - rd navbar skin (transparent, inverse, default)
+//- attrs - additional HTML attributes of rd navbar
+//- logo - logo markup (<img/> or text)
+//- links - nav links object
+mixin rd-navbar-default-inner(skin, attrs, logo, activeLink, links)
+	// RD Navbar minimal
+	.rd-navbar-wrap
+		nav&attributes(attrs).rd-navbar(class=skin data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="120px" data-lg-stick-up-offset="120px" )
+			.rd-navbar-inner
+				.rd-navbar-top-panel
+					//Navbar Brand
+					.rd-navbar-brand.d-none.d-lg-inline-block
+						a(href="index.html") !{logo}
+
+					div
+						address.contact-info.d-md-inline-block.text-left.offset-none
+							.p.unit.unit-spacing-xs.flex-row
+								.unit-left
+									span.icon.icon-xs.icon-circle.icon-gray-light.mdi.mdi-phone.text-primary
+								.unit-body
+									a(href="tel:#").text-gray-darkest 1-800-1234-567
+									br
+									a(href="tel:#").text-gray-darkest 1-800-3214-654
+
+						address.contact-info.d-md-inline-block.text-left
+							.p.unit.flex-row.unit-spacing-xs
+								.unit-left
+									span.icon.icon-xs.icon-circle.icon-gray-light.mdi.mdi-map-marker.text-primary
+								.unit-body
+									a(href="#").text-gray-darkest
+										| 2130 Fulton Street San Diego
+										br
+										| CA 94117-1080 USA
+
+
+				// RD Navbar Panel
+				.rd-navbar-panel
+					// RD Navbar Toggle
+					button.rd-navbar-toggle(data-rd-navbar-toggle=".rd-navbar, .rd-navbar-nav-wrap")
+						span
+
+					//Navbar Brand
+					.rd-navbar-brand.d-xl-none
+						a(href="index.html") !{logo}
+
+					button(data-rd-navbar-toggle=".rd-navbar, .rd-navbar-top-panel" class="rd-navbar-top-panel-toggle")
+						span
+
+				.rd-navbar-menu-wrap
+					.rd-navbar-nav-wrap
+						-var tabs = [{obj: cfg.nav.components, columns: 4}]
+						-var megamenus = [{obj: cfg.nav.pages, columns: 3}]
+						-var type = 'simple'
+						-var megamenuColumns = 4
+
+						.rd-navbar-mobile-scroll
+							//Navbar Brand Mobile
+							.rd-navbar-mobile-brand
+								a(href="index.html") !{logo}
+
+							.form-search-wrap
+								+widget-form-search('form-input-gray-lightest input-sm', "form-label-sm", "rd-navbar-form-search-widget")
+
+							// RD Navbar Nav
+							ul.rd-navbar-nav
+								each link, title in links
+									-type = 'simple'
+									li(class=(activeLink.title == link.title) ? 'active' : '')
+										a(href=link.href class=link.icon)
+											span= link.title
+											- if (typeof(link.badge) !== 'undefined')
+											span.rd-navbar-label.text-middle.badge-custom.badge-danger.badge-xs-custom.badge-rounded-custom.badge #{link.badge}
+
+
+										each megamenu in megamenus
+											-
+												if (JSON.stringify(megamenu.obj) === JSON.stringify(link)){
+												type = 'megamenu'
+												if (megamenu.columns !== 'undefined') megamenuColumns = megamenu.columns
+												}
+										case type
+
+											when 'megamenu'
+												.rd-navbar-megamenu
+													.row
+														-var columnLength = Object.keys(link.submenu).length / megamenuColumns
+														- for (var i = 1; i <= megamenuColumns; i++){
+														- var j = 0
+														div(class='col-lg-4')
+															each dropdown in link.submenu
+																-j++
+																-if (j <= (i - 1) * columnLength) continue
+																-if (j > (i*columnLength)) break
+																h6 #{dropdown.title}
+																hr.text-subline
+																ul.list-unstyled.offset-lg-top-25
+																	each link in dropdown.submenu
+																		li
+																			a(href=link.href)= link.title
+
+														-}
+
+											default
+												+rd-navbar-simple-submenu(link)
+					//RD Navbar Search
+					div.rd-navbar-search
+						a.rd-navbar-search-toggle.mdi(data-rd-navbar-toggle=".rd-navbar-menu-wrap,.rd-navbar-search" href="#")
+							span
+						form(action="search-results.html" data-search-live="rd-search-results-live" method="GET").rd-navbar-search-form.search-form-icon-right.rd-search
+							div.form-wrap
+								label(for="rd-navbar-search-form-input" class="form-label") Type and hit enter...
+								input(class="rd-navbar-search-form-input form-input form-input-gray-lightest" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off")
+							#rd-search-results-live.rd-search-results-live

@@ -1,0 +1,22 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include  ../elements/_ui-rd-map
+
+//- Title
+block variables
+	- pageName = 'Contacts'
+
+//- Page
+block page
+
+	// Page Header
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	include ../sections/_section-get-in-touch-variant-3
+
+	// Page Footers
+	include ../sections/_section-footer-default

@@ -1,0 +1,29 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-classic
+
+//- Title
+block variables
+	- pageName = '404'
+
+//- Page
+block page
+
+
+	section.section.section-single.bg-accent
+		.section-single-inner
+			.section-single-header: .container
+				+logo
+
+			.section-single-main: .container
+				// 404
+				h2 PAGE NOT FOUND
+				.text-extra-big.text-white-opacity-02.font-accent 404
+				p.block-sm.offset-top-50 The page requested couldn't be found - this could be due to a spelling error in the URL or a removed page.
+				.group.offset-top-30
+					a.btn.btn-ellipse.btn-specific(href= 'index.html')
+						| back to home page
+			.section-single-footer: .container
+				+rights
+

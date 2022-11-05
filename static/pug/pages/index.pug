@@ -1,0 +1,345 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-rd-navbar-default-transparent
+include ../elements/_ui_post-modern-classic
+include ../elements/_ui-thumbnail-josip
+include ../elements/_ui-testimonials-type-1
+include ../elements/_ui-rd-map
+include ../elements/_ui-services
+
+//-Title
+block title
+	title Home
+
+//- Page
+block page
+
+	include ../sections/_header-classic
+	include ../sections/_section-swiper
+
+	//Sheldue
+	section.bg-default-liac.bg-white-liac.section.section-md.pt-xl-0
+		.container.section-top-34.section-lg-top-0
+			.row.no-gutters.justify-content-sm-center.justify-content-xl-start.offset-lg-top-34-negative.sheldue.text-sm-left.to-front.row-30
+				.col-md-8.col-lg-5.col-xl-3
+					.sheldue-item.first
+						.sheldue-item-body
+							.icon.icon-xs.mdi.mdi-calendar-clock.text-white-50
+							h6.d-inline-block.inset-left-10.text-white opening hours
+							hr
+							.row.offset-top-24.justify-content-sm-between.text-gray-light
+								.col-sm-4 Mon–Fri
+								.col-sm-7.offset-top-10.offset-xs-top-0.text-sm-right 8:00am–7:00pm
+								.col-sm-4.offset-top-30.offset-xs-top-10 Saturday
+								.col-sm-7.offset-top-10.text-sm-right 9:00am–5:00pm
+								.col-sm-4.offset-top-30.offset-xs-top-10 Sunday
+								.col-sm-7.offset-top-10.text-sm-right 9:00am–3:00pm
+						.sheldue-more
+							a(href="timetable.html").btn.btn-white.btn-block.btn-rect view timetable
+
+				.col-md-8.col-lg-5.col-xl-3
+					.sheldue-item.light
+						.sheldue-item-body
+							.icon.icon-xs.mdi.mdi-calendar-today.text-white-50
+							h6.d-inline-block.inset-left-10.text-white doctors’ timetable
+							hr
+							.offset-top-24.text-gray-light
+								p The following is for guidance only to help you plan your appointment with a preferred doctor or nurse. It does not guarantee availability as the doctors or nurses may sometimes be attending to other duties.
+						.sheldue-more
+							a(href="timetable.html").btn.btn-white.btn-block.btn-rect view timetable
+
+				.col-md-8.col-lg-5.col-xl-3
+					.sheldue-item
+						.sheldue-item-body
+							.icon.icon-xs.mdi.mdi-phone.text-white-50
+							h6.d-inline-block.inset-left-10.text-white appointments
+							hr
+							.offset-top-24.text-gray-light
+								p The first step towards a healthy life  is to schedule an appointment. Please contact our office by phone or complete the appointment request form.
+						.sheldue-more
+							a(href="make-an-appointment.html").btn.btn-white.btn-block.btn-rect make an appointment
+
+				.col-md-8.col-lg-5.col-xl-3
+					.sheldue-item.light.last
+						.sheldue-item-body
+							.icon.icon-xs.icon-emergency-01.text-white-50
+							h6.d-inline-block.inset-left-10.text-white emergency cases
+							hr
+							.offset-top-24
+								h5.font-weight-bold
+									a(href="tel:#").text-white 1-800-1234-567
+								p.text-gray-light Call us!
+						.sheldue-more
+							a(href="contacts.html").btn.btn-white.btn-block.btn-rect Contact page
+
+
+	include ../sections/_section-what-makes-us-different
+
+	// Material Parallax
+	section.parallax-container( data-parallax-img='images/background-03-1920x939.jpg')
+		.parallax-content.section-98.section-sm-110.context-dark
+			.container.text-left
+				.row.justify-content-sm-center.justify-content-lg-start
+					.col-md-10.col-lg-8.col-xl-5
+						h2
+							| All Kinds
+							br.d-none.d-xl-inline-block
+							| of Diagnostics
+						p.offset-top-30.text-white Medina offers the region’s most comprehensive range of diagnostic services, from MRI to X-ray.
+						.offset-top-30
+							a(href="make-an-appointment.html").btn.btn-ellipse.btn-white free consultation
+
+	// main services
+	section.section-lg.bg-default.section
+		.container
+			h3.text-center Our Services
+			.offset-top-41
+				p.custom-paragraph At our clinic, you can experience the best and the most extensive range of diagnostic services in the state. Feel free to browse our website for more information.
+			.row.offset-top-60.text-lg-left.row-30
+				.col-md-6.col-lg-4
+					+service('images/home-01-320x320.jpg', 'Pediatrics', 'services.html')
+				.col-md-6.col-lg-4.offset-sm-top-0
+					+service('images/home-02-320x320.jpg', 'MRI of the brain', 'services.html')
+				.col-md-6.col-lg-4.offset-md-top-0
+					+service('images/home-03-320x320.jpg', 'x-ray diagnostic', 'services.html')
+				.col-md-6.col-lg-4
+					+service('images/home-04-320x320.jpg', 'laboratory services', 'services.html')
+				.col-md-6.col-lg-4
+					+service('images/home-05-320x320.jpg', 'pregnancy', 'services.html')
+				.col-md-6.col-lg-4
+					+service('images/home-06-320x320.jpg', 'Best Equipment', 'services.html')
+
+
+	// Our Team
+	section.section.section-md.p-xl-0
+		.container-fluid
+			.justify-content-sm-center.row-30.row
+				+thumbnail-josip(
+					{
+						"type": "thumbnail",
+						"title": "Dr. Scott Riley",
+						"description": "Chief Medical Officer, Pathologist",
+						"thumb": {"src": "images/our-team-05-384x410.jpg", "width": 384, "height": 410, "alt": ""},
+						"target": {"href": 'team-member.html'},
+						"btnLink": 'team-member.html',
+						"btnClass": "btn-white",
+						"btnText": "view full profile",
+						"styleClass": "thumbnail-big"
+					})
+				+thumbnail-josip(
+					{
+						"type": "thumbnail",
+						"title": "Dr. Jane Fowler",
+						"description": "Clinical Laboratory Technologist",
+						"thumb": {"src": "images/our-team-06-384x410.jpg", "width": 384, "height": 410, "alt": ""},
+						"target": {"href": 'team-member.html'},
+						"btnLink": 'team-member.html',
+						"btnClass": "btn-white",
+						"btnText": "view full profile",
+						"styleClass": "thumbnail-big"
+					})
+				+thumbnail-josip(
+					{
+						"type": "thumbnail",
+						"title": "Dr. Eric Snyder",
+						"description": "MRI Technologist",
+						"thumb": {"src": "images/our-team-07-384x410.jpg", "width": 384, "height": 410, "alt": ""},
+						"target": {"href": 'team-member.html'},
+						"btnLink": 'team-member.html',
+						"btnClass": "btn-white",
+						"btnText": "view full profile",
+						"styleClass": "thumbnail-big offset-md-top-0 odd"
+					})
+				+thumbnail-josip(
+					{
+						"type": "thumbnail",
+						"title": "Dr. Martha Schmidt",
+						"description": "EKG Technician",
+						"thumb": {"src": "images/our-team-08-384x410.jpg", "width": 384, "height": 410, "alt": ""},
+						"target": {"href": 'team-member.html'},
+						"btnLink": 'team-member.html',
+						"btnClass": "btn-white",
+						"btnText": "view full profile",
+						"styleClass": "thumbnail-big offset-md-top-0"
+					})
+				+thumbnail-josip(
+					{
+						"type": "thumbnail",
+						"title": "Dr. James Wilson",
+						"description": "Radiology Technician",
+						"thumb": {"src": "images/our-team-09-384x410.jpg", "width": 384, "height": 410, "alt": ""},
+						"target": {"href": 'team-member.html'},
+						"btnLink": 'team-member.html',
+						"btnClass": "btn-white",
+						"btnText": "view full profile",
+						"styleClass": "thumbnail-big "
+					})
+
+
+	// testimonials
+	section.section-lg.bg-default-liac
+		.container
+			h3.text-center Testimonials
+			.offset-top-66
+				.owl-carousel.owl-carousel-default.owl-carousel-class-light(
+					data-loop="false"
+					data-items="1"
+					data-dots="true"
+					data-mouse-drag="false"
+					data-lg-items="2"
+					data-nav="false"
+					data-owl= {
+						dots: true,
+						nav: false,
+						autoplayTimeout: 3500
+					})
+					.item
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-betty-wade-60x60.jpg",
+								"alt": ""
+							},
+							"Betty Wade",
+							"Patient",
+							"I had a colonoscopy at Medina Diagnostic Center. From the moment I entered the center, I was greeted and treated warmly and respectfully and it was the best experience."
+						)
+					.item
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-bryan-green-60x60.jpg",
+								"alt": ""
+							},
+							"Bryan Green",
+							"Patient",
+							"I would like to thank and compliment the staff at Medina, including the outpatient, laboratory staff and cardiac division during my stay at your facility on July 9th and 10th."
+						)
+					.item
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-bryan-green-60x60.jpg",
+								"alt": ""
+							},
+							"Bryan Green",
+							"Patient",
+							"I had a colonoscopy at Medina Diagnostic Center. From the moment I entered the center, I was greeted and treated warmly and respectfully and it was the best experience."
+						)
+					.item
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-betty-wade-60x60.jpg",
+								"alt": ""
+							},
+							"Betty Wade",
+							"Patient",
+							"I would like to thank and compliment the staff at Medina, including the outpatient, laboratory staff and cardiac division during my stay at your facility on July 9th and 10th."
+						)
+
+		// RD Parallax
+	section.parallax-container( data-parallax-img='images/background-04-1920x980.jpg')
+		.parallax-content.section-98.section-sm-110.context-dark
+			.container.text-left
+				.row.justify-content-sm-center.justify-content-lg-start
+					.col-md-10.col-lg-8.col-xl-5
+						h2
+							| Pediatric
+							br.d-none.d-xl-inline-block
+							| Diagnostics
+						p.offset-top-30.text-white Our center provides a vast range of pediatric diagnostic services for children all over our state.
+						.offset-top-30
+							a(href="make-an-appointment.html").btn.btn-ellipse.btn-white free consultation
+	// latest blog posts
+	section.section-98.section-sm-110
+		.container
+			h3.text-center.text-lg-left Latest Blog Posts
+			.row.justify-content-sm-center.offset-top-60
+				.col-md-8.col-lg-4
+					+post-modern-classic({
+						"titleHref": 'single-post.html',
+						"title": "Reasons to Visit a Breast Specialist"
+					},
+						[],
+						[
+							{
+								"listTitle": "June 21, 2021 at 8:12pm"
+							},
+							{
+								"listHref": 'blog-masonry.html',
+								"listClass": "",
+								"listTitle": "News"
+							}
+						],{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-13-370x250.jpg", "width": 370, "height": 250, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						p There are a lot of women that are unaware of the numerous risks associated with their health and eventually ignore the importance of visiting...
+
+				.col-md-8.col-lg-4.offset-top-50.offset-md-top-0
+					+post-modern-classic({
+						"titleHref": 'single-post.html',
+						"title": "Picking the Right Diagnostic Services for Efficient Results"
+					},
+						[],
+						[
+							{
+								"listTitle": "June 21, 2021 at 8:12pm"
+							},
+							{
+								"listHref": 'blog-masonry.html',
+								"listClass": "",
+								"listTitle": "News"
+							}
+						],{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-14-370x250.jpg", "width": 370, "height": 250, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						p There have been a lot of cases in which people were not provided with accurate reports that eventually affected their medical treatment. There is always...
+
+				.col-md-8.col-lg-4.offset-top-50.offset-md-top-0
+					+post-modern-classic({
+						"titleHref": 'single-post.html',
+						"title": "Preparing for an ECG in 8 Easy Steps: Tips From Our Diagnosticians"
+					},
+						[],
+						[
+							{
+								"listTitle": "June 21, 2021 at 8:12pm"
+							},
+							{
+								"listHref": 'blog-masonry.html',
+								"listClass": "",
+								"listTitle": "News"
+							}
+						],{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-15-370x250.jpg", "width": 370, "height": 250, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						p An ECG stands for an "electrocardiogram," which is a test that measures and records the electrical activity of the heart. It is used by doctors to obtain...
+
+			.offset-top-50.text-center.text-lg-left
+				a(href="blog-grid.html").btn.btn-ellipse.btn-primary View all blog posts
+
+
+	section.section
+		//Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.
+		//Please note that YOUR_API_KEY should replaced with your key.
+		//Example: <div class="google-map-container" data-key="YOUR_API_KEY">
+		.google-map-container( data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-zoom='5', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png', data-styles='[{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":60}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"lightness":30}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ef8c25"},{"lightness":40}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#b6c54c"},{"lightness":40},{"saturation":-40}]},{}]' )
+			.google-map
+			ul.google-map-markers
+				li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow' )
+
+	// Page Footer
+	include ../sections/_section-footer-default
+

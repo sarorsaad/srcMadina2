@@ -1,0 +1,203 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-post-modern-timeline
+
+//- Title
+block variables
+	- pageName = 'Blog Modern'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+
+	section.section-98.section-sm-110
+		.container
+			.row.justify-content-sm-center
+				.col-lg-10.col-xl-8
+					// Blog Modern
+					.post-modern-timeline-date.text-md-left
+						.d-inline-block.text-center
+							time.text-regular(datetime="2021-01-01") June 21, 2021 #[br.d-none.d-lg-inline-block] at 8:12pm
+
+					+post-modern-timeline("post-modern-timeline-left", {
+						"titleHref": 'single-post.html',
+						"title": "Preparing for an ECG in 8 Easy Steps"
+					},
+						[
+							{
+								"metaHref": "#",
+								"metaTitle": "Health"
+							},
+							{
+								"metaHref": "#",
+								"metaTitle": "News"
+							},
+							{
+								"metaHref": "#",
+								"metaTitle": "ECG"
+							},
+						],
+						[
+							{
+								"listTitle": "News",
+								"listHref": "single-post.html"
+							}
+						],
+						{
+							"title": "Dr. Martha Schmidt",
+							"width": 90,
+							"height": 90,
+							"src": "images/user-amanda-wells-90x90.jpg",
+							"alt": "Dr. Martha Schmidt"
+						},{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-04-570x370.jpg", "width": 570, "height": 400, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						p Etiam et imperdiet quam. In sit amet finibus lorem, ac ultricies enim. Aliquam volutpat enim diam, vitae. Phasellus non luctus justo, eu fringilla tortor.
+
+					.post-modern-timeline-date.text-md-left
+						.d-inline-block.text-center
+							time.text-regular(datetime="2021-01-01") June 21, 2021 #[br.d-none.d-lg-inline-block] at 8:12pm
+
+					+post-modern-timeline("post-modern-timeline-left", {
+						"titleHref": 'single-post.html',
+						"title": "Reasons to Visit a Breast Specialist"
+					},
+						[
+							{
+								"metaHref": "#",
+								"metaTitle": "Health"
+							},
+							{
+								"metaHref": "#",
+								"metaTitle": "News"
+							},
+							{
+								"metaHref": "#",
+								"metaTitle": "Diagnostics"
+							},
+						],
+						[
+							{
+								"listTitle": "News",
+								"listHref": "single-post.html"
+							}
+						],
+						{
+							"title": "Dr. Eric Snyder",
+							"width": 90,
+							"height": 90,
+							"src": "images/user-jeffrey-welch-90x90.jpg",
+							"alt": "Dr. Eric Snyder"
+						},{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-05-570x370.jpg", "width": 570, "height": 380, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						p Phasellus et lacus mattis, tincidunt metus sodales, tincidunt urna. Cras felis neque, iaculis vitae varius eu, luctus consectetur odio.
+
+					.post-modern-timeline-date.text-md-left
+						.d-inline-block.text-center
+							time.text-regular(datetime="2021-01-01") June 21, 2021 #[br.d-none.d-lg-inline-block] at 8:12pm
+
+					+post-modern-timeline("post-modern-timeline-left", {
+						"titleHref": 'single-post.html',
+						"title": "Picking the Right Diagnostic Services"
+					},
+						[
+							{
+								"metaHref": "#",
+								"metaTitle": "Health"
+							},
+							{
+								"metaHref": "#",
+								"metaTitle": "News"
+							},
+							{
+								"metaHref": "#",
+								"metaTitle": "Tips"
+							},
+						],
+						[
+							{
+								"listTitle": "Science",
+								"listHref": "single-post.html"
+							}
+						],
+						{
+							"title": "Dr. Martha Schmidt",
+							"width": 90,
+							"height": 90,
+							"src": "images/user-amanda-wells-90x90.jpg",
+							"alt": "Dr. Martha Schmidt"
+						},{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-06-570x370.jpg", "width": 570, "height": 370, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						p Phasellus et lacus mattis, tincidunt metus sodales, tincidunt urna. Cras felis neque, iaculis vitae varius eu, luctus consectetur odio.
+
+					.post-modern-timeline-date.text-md-left
+						.d-inline-block.text-center
+							time.text-regular(datetime="2021-01-01") June 21, 2021 #[br.d-none.d-lg-inline-block] at 8:12pm
+
+					+post-modern-timeline("post-modern-timeline-left post-modern-timeline-left-last", {
+						"titleHref": 'single-post.html',
+						"title": "The Purpose and Procedure of X-ray Imaging"
+					},
+						[
+							{
+								"metaHref": "#",
+								"metaTitle": "Health"
+							},
+							{
+								"metaHref": "#",
+								"metaTitle": "News"
+							},
+							{
+								"metaHref": "#",
+								"metaTitle": "X-ray"
+							},
+						],
+						[
+							{
+								"listTitle": "Food",
+								"listHref": "single-post.html"
+							}
+						],
+						{
+							"title": "Dr. Eric Snyder",
+							"width": 90,
+							"height": 90,
+							"src": "images/user-jeffrey-welch-90x90.jpg",
+							"alt": "Dr. Eric Snyder"
+						},{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-07-570x370.jpg", "width": 570, "height": 370, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						p Cras tempor eu enim id pulvinar. Proin at imperdiet felis, vel vehicula neque. Nulla quis nisl facilisis ex dignissim euismod eu vel neque.
+					.row.offset-top-50.offset-lg-top-0
+						.col-xl-10.offset-xl-2.text-xl-left
+							.inset-xl-left-10
+								+pagination-classic(
+									1,
+									[{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}]
+
+								)
+
+				.col-md-10.col-lg-8.col-xl-4.offset-top-66.offset-md-top-90.offset-lg-top-0
+					.blog-grid-sidebar.inset-xxl-left-30
+						include ../sections/_section-sidebar
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

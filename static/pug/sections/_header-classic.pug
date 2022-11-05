@@ -1,0 +1,70 @@
+header.section.page-header.header-absolute
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar-classic(
+			data-layout=                'rd-navbar-fixed'
+			data-sm-layout=             'rd-navbar-fixed'
+			data-md-layout=             'rd-navbar-fixed'
+			data-md-device-layout=      'rd-navbar-fixed'
+			data-lg-layout=             'rd-navbar-fixed'
+			data-lg-device-layout=      'rd-navbar-fixed'
+			data-xl-layout=             'rd-navbar-static'
+			data-xl-device-layout=      'rd-navbar-static'
+			data-lg-stick-up-offset=    '46px'
+			data-xl-stick-up-offset=    '46px'
+			data-xxl-stick-up-offset=   '46px'
+			data-lg-stick-up=           'true'
+			data-xl-stick-up=           'true'
+			data-xxl-stick-up=          'true'
+		)
+			.rd-navbar-collapse-toggle.rd-navbar-fixed-element-1( data-rd-navbar-toggle='.rd-navbar-collapse' ): span
+			.rd-navbar-aside-outer.rd-navbar-collapse
+				//RD Navbar Brand
+
+				.rd-navbar-aside
+					.rd-navbar-brand
+						+logo
+					.contacts-wrap
+						address.contact-info.reveal-sm-inline-block.text-left.offset-none
+							.p.unit.unit-spacing-xs.unit-horizontal
+								.unit-left
+									span.icon.icon-xs.icon-circle.icon-white-17.mdi.mdi-phone
+								.unit-body
+									a(href="tel:#").text-white 1-800-1234-567
+									br
+									a(href="tel:#").text-white 1-800-3214-654
+
+						address.contact-info.reveal-sm-inline-block.text-left
+							.p.unit.unit-horizontal.unit-spacing-xs
+								.unit-left
+									span.icon.icon-xs.icon-circle.icon-white-17.mdi.mdi-map-marker
+								.unit-body
+									a(href="#").text-white
+										| 2130 Fulton Street San Diego
+										br
+										| CA 94117-1080 USA
+
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					//RD Navbar Panel
+					.rd-navbar-panel
+						//RD Navbar Toggle
+						button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+						//RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+
+					.rd-navbar-main-element
+						.rd-navbar-nav-wrap
+							+navigation( menu )
+
+						//RD Navbar Search
+						.rd-navbar-search
+							button.rd-navbar-search-toggle.rd-navbar-fixed-element-2(data-rd-navbar-toggle='.rd-navbar-search'): span
+							form.rd-search(action='search-results.html' data-search-live='rd-search-results-live' method='GET')
+								.form-wrap
+									label.form-label(for='rd-navbar-search-form-input') Type and hit enter...
+									input(class='rd-navbar-search-form-input form-input' id='rd-navbar-search-form-input' type='text' name='s' autocomplete="off")
+									#rd-search-results-live.rd-search-results-live
+								button.rd-search-form-submit.fa-search(type='submit')

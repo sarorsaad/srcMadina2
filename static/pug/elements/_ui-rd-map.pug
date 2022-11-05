@@ -1,0 +1,14 @@
+//- mapLocation - {map} Object
+//- markerLocations - mass of {location} Objects
+mixin rd-map(mapLocation, markerLocations)
+  // RD Google Map
+  //Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.
+  //Please note that YOUR_API_KEY should replaced with your key.
+  //Example: <div class="google-map-container" data-key="YOUR_API_KEY">
+
+  .rd-google-map
+    #rd-google-map.rd-google-map__model(data-zoom= mapLocation.zoom, data-x= mapLocation.dataX, data-y= mapLocation.dataY, data-styles= mapLocation.dataStyles)
+    ul.rd-google-map__locations
+      each item in markerLocations
+        li(data-x= item.dataX, data-y= item.dataY)
+          p= item.markerDesc

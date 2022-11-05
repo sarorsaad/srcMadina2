@@ -1,0 +1,138 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-counter-type-1
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-progress-bar-circle
+include ../elements/_widget-list-social
+
+//- Title
+block variables
+	- pageName = 'Forms'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	//LOGIN FORM
+	section.section.section-lg.bg-default
+		.container
+			.row.justify-content-sm-center.justify-content-xl-start
+				.col-md-8.col-xl-5
+					h6.text-lg-left LOGIN FORM
+					hr.text-subline
+					// RD Mailform
+					form.text-left.offset-top-30(action='#')
+						.form-wrap
+							label.form-label.form-label-outside(for="contact-email") Username or e-mail
+							input#contact-email.form-input(type="email" name="email" )
+						.form-wrap
+							label.form-label.form-label-outside(for="password") Password
+							input#password.form-input(name="password" type="password" )
+						.offset-top-20
+							.d-sm-flex.offset-none.align-items-sm-center.text-center.text-sm-left
+								button(type="submit").btn.btn-ellipse.btn-primary sign in
+								div.inset-left-20.inset-right-20.offset-top-14.offset-xs-top-0
+									p or enter with
+								.offset-top-14.offset-xs-top-0
+									+widget-list-social([
+										{
+											"icon": "fa fa-facebook",
+											"href": "#"
+										},
+										{
+											"icon": "fa fa-twitter",
+											"href": "#"
+										},
+										{
+											"icon": "fa fa-google-plus",
+											"href": "#"
+										}
+									],
+										'icon-xxs icon-circle icon-gray-light')
+
+	// Contact us
+	section.section.section-lg.bg-default
+		.container
+			.row.justify-content-sm-center.justify-content-xl-start
+				.col-md-8
+					h6.text-lg-left contact us
+					hr.text-subline
+					.offset-top-30
+						form.rd-mailform.text-left(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php', novalidate='novalidate')
+							.row.justify-content-sm-center
+								.col-md-6
+									.form-wrap.form-wrap-label-outside
+										label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-first-name') First name
+										input#contacts-first-name.form-input.form-input-last-child(type='text', name='first-name', data-constraints='@Required')
+										span.form-validation
+									.form-wrap.form-wrap-label-outside.offset-top-20
+										label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-email') E-mail
+										input#contacts-email.form-input.form-input-last-child(type='email', name='email', data-constraints='@Email @Required')
+										span.form-validation
+								.col-md-6.offset-top-20.offset-sm-top-0
+									.form-wrap.form-wrap-label-outside
+										label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-last-name') Last name
+										input#contacts-last-name.form-input.form-input-last-child(type='text', name='last-name', data-constraints='@Required')
+										span.form-validation
+									.form-wrap.form-wrap-label-outside.offset-top-20
+										label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-phone') Phone
+										input#contacts-phone.form-input.form-input-last-child(type='text', name='last-name', data-constraints='@IsNumeric @Required')
+										span.form-validation
+							.form-wrap.form-wrap-label-outside.offset-top-20
+								label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-message') Message
+								textarea#contacts-message.form-input.form-input-last-child(name='message', data-constraints='@Required', style='max-height: 150px;')
+								span.form-validation
+							.offset-top-18.offset-sm-top-30.text-center.text-md-left
+								button.btn.btn-ellipse.btn-primary(type='submit', style='min-width: 130px;') send message
+	// newsletter
+	section.section.section-lg.bg-default
+		.container.text-left
+			.row.justify-content-sm-center.justify-content-xl-start
+				.col-md-8.col-xl-6
+					h6.text-lg-left newsletter
+					hr.text-subline
+					p Enter your email address to receive up-to-date news, new patient information and other useful stuff, delivered right to your inbox.
+					form.rd-mailform.form-inline-custom.rd-mailform-subscribe(data-form-output='form-output-global', data-form-type='subscribe', method='post', action='bat/rd-mailform.php', novalidate='novalidate')
+						.form-wrap
+							.input-group
+								input#regula-generated-874563.form-input.form-input-ellipse(placeholder='Enter your e-mail', type='email', name='email', data-constraints='@Required @Email')
+								span.form-validation
+								span.input-group-btn
+							.offset-top-20.text-center.text-md-left
+									button.btn.btn-ellipse.btn-primary(type='submit') Subscribe
+
+
+
+	section.section.section-lg.bg-default.text-center
+		.container: .row.justify-content-xl-start.justify-content-center: .col-md-8.col-xl-6
+			h3 MailChimp
+			p.big Sign up to our newsletter and be the first to know about the latest news, special offers, events, and discounts.
+
+			//Mailchimp
+			form.rd-form.mailchimp-mailform.rd-form-inline(data-form-output='form-output-global' action='https://templatemonster.us1.list-manage.com/subscribe/post?u=1e39a6d114a4cc130a4edbe43&id=9fc9ef194a' method='post')
+				.form-wrap
+					label.form-label(for='mailchimp-email') Enter your e-mail
+					input#mailchimp-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+				.form-button
+					button.btn.btn-primary(type='submit') Subscribe
+
+	section.section.section-lg.bg-default.text-center
+		.container: .row.justify-content-xl-start.justify-content-center: .col-md-8.col-xl-6
+			h3 Campaign Monitor
+			p.big Sign up to our newsletter and be the first to know about the latest news, special offers, events, and discounts.
+
+			//Campaign Monitor
+			form.rd-form.campaign-mailform.rd-form-inline(data-form-output='form-output-global' action='https://templatermonster.createsend.com/t/j/s/zjjikd/' method='post')
+				.form-wrap
+					label.form-label(for='campaign-email') Enter your e-mail
+					input#campaign-email.form-input(type='email' name='cm-zjjikd-zjjikd' data-constraints='@Email @Required')
+				.form-button
+					button.btn.btn-primary(type='submit') Subscribe
+
+	// Page Footer
+	include ../sections/_section-footer-default

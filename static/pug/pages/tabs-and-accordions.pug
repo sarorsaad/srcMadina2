@@ -1,0 +1,93 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include  ../elements/_ui-tabs-classic
+include  ../elements/_ui-tabs-classic-vertical
+include  ../elements/_ui_accordion-classic
+include  ../elements/_ui_accordion-bootstrap
+
+//- Title
+block variables
+	- pageName = 'Tabs and Accordions'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// Page Content
+	section.section-lg.section.bg-default
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start
+				.col-md-8
+					h3.text-md-left Classic Tabs
+					.offset-sm-top-60.text-left
+						+tabs-classic(['Health Care', 'Diagnostics', 'Team', 'Skills'])
+							div
+								p In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+							div
+								p
+									| Sed accumsan porttitor mauris in commodo. Integer eros lorem, semper non ultrices ac, ultricies eget nunc. Aliquam erat volutpat. Vestibulum lectus ante, pulvinar in risus eget, venenatis tempor dolor. Aliquam rhoncus purus ante, a fringilla lacus tincidunt ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+							div
+								p
+									| Nulla elementum varius ante quis sollicitudin. Quisque nunc dolor, ultrices vitae aliquet vitae, placerat a quam. Nam in eros pulvinar, aliquet elit sollicitudin, blandit nibh. Mauris tempor imperdiet est ac fringilla. Vestibulum at feugiat tellus. Aliquam non orci dui. Quisque sodales quis augue ac sodales. Donec pulvinar sagittis mollis. Sed ac tortor ut magna fermentum auctor.
+							div
+								p
+								| Morbi eros sapien, gravida vitae orci vel, commodo aliquet augue. Etiam elementum urna eros, et pharetra augue tincidunt id. Etiam nec metus nibh. In sagittis rhoncus purus in commodo. Aliquam tempor, mi quis lacinia sagittis, nulla quam cursus tellus, semper luctus nunc ante eget mi. Pellentesque vestibulum vitae arcu ut efficitur.
+
+
+	// classic vertical tabs
+	section.section-lg.section.bg-default
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start
+				.col-md-8
+					h3.text-md-left Classic Vertical Tabs
+					.offset-sm-top-60.text-left
+						#tabs-2.tabs-custom.tabs-vertical.tabs-corporate
+							//Nav tabs
+							ul.nav.nav-tabs
+								li.nav-item(role='presentation'): a.nav-link(href='#tabs-2-1' data-toggle='tab') HEALTH CARE
+								li.nav-item(role='presentation'): a.nav-link(href='#tabs-2-2' data-toggle='tab') DIAGNOSTICS
+								li.nav-item(role='presentation'): a.nav-link(href='#tabs-2-3' data-toggle='tab') TEAM
+								li.nav-item(role='presentation'): a.nav-link(href='#tabs-2-4' data-toggle='tab') SKILLS
+
+							//Tab panes
+							.tab-content
+								div#tabs-2-1.tab-pane.fade
+									p In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+
+								div#tabs-2-2.tab-pane.fade
+									p Sed accumsan porttitor mauris in commodo. Integer eros lorem, semper non ultrices ac, ultricies eget nunc. Aliquam erat volutpat. Vestibulum lectus ante, pulvinar in risus eget, venenatis tempor dolor. Aliquam rhoncus purus ante, a fringilla lacus tincidunt ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+								div#tabs-2-3.tab-pane.fade
+									p Nulla elementum varius ante quis sollicitudin. Quisque nunc dolor, ultrices vitae aliquet vitae, placerat a quam. Nam in eros pulvinar, aliquet elit sollicitudin, blandit nibh. Mauris tempor imperdiet est ac fringilla. Vestibulum at feugiat tellus. Aliquam non orci dui. Quisque sodales quis augue ac sodales. Donec pulvinar sagittis mollis. Sed ac tortor ut magna fermentum auctor.
+
+								div#tabs-2-4.tab-pane.fade
+									p Morbi eros sapien, gravida vitae orci vel, commodo aliquet augue. Etiam elementum urna eros, et pharetra augue tincidunt id. Etiam nec metus nibh. In sagittis rhoncus purus in commodo. Aliquam tempor, mi quis lacinia sagittis, nulla quam cursus tellus, semper luctus nunc ante eget mi. Pellentesque vestibulum vitae arcu ut efficitur.
+
+	// classic accordion
+	section.section-lg.section.bg-default
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start
+				.col-md-8
+					h3.text-md-left Classic Accordion
+					.offset-sm-top-60.text-left
+						+accordion-classic(['Can I track my order?', 'How can I change something in my order?', 'How can I pay for my order?', 'How long will my order take to be delivered?'])
+							div
+								| Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 15 minutes after your order is placed. Within a few hours of you placing your order, you will receive an expected delivery time. When the order will be ready for delivery, you will receive another email with the tracking number and a link to trace the order online with the courier.
+							div
+								| If you need to change something in your order, please contact us immediately. We usually process orders within 30 minutes, and once we have processed your order, we will be unable to make any changes.
+							div
+								| We accept Visa, MasterCard, and American Express credit and debit cards for your convenience.
+							div
+								| Delivery times will depend on your location. Once payment is confirmed your order will be packaged. Delivery can be expected within a day.
+
+
+
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,177 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-pagination-classic
+include ../elements/_ui_post-modern-classic
+
+//- Title
+block variables
+	- pageName = 'Blog Masonry'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	section.section-lg.section.bg-default
+		.container
+			.row.justify-content-sm-center
+				.col-lg-10.col-xl-8
+					.row.justify-content-sm-center
+						.col-md-6
+							+post-modern-classic({
+								"titleHref": 'single-post.html',
+								"title": "Reasons to Visit a Breast Specialist"
+							},
+								[
+									{
+										"metaHref": "#",
+										"metaTitle": "Health"
+									},
+									{
+										"metaHref": "#",
+										"metaTitle": "News"
+									},
+									{
+										"metaHref": "#",
+										"metaTitle": "Diagnostics"
+									},
+								],
+								[
+									{
+										"listTitle": "June 21, 2021 at 8:12pm"
+									},
+									{
+										"listHref": 'single-post.html',
+										"listClass": "",
+										"listTitle": "News"
+									}
+								],{
+								"type": "thumbnail",
+								"thumb": {"src": "images/post-08-770x480.jpg", "width": 370, "height": 240, "alt": ""},
+								"target": {"href": 'single-post.html'}
+							})
+								p Etiam et imperdiet quam. In sit amet finibus lorem, ac ultricies enim. Aliquam volutpat enim diam, vitae. Phasellus non luctus justo, eu fringilla tortor.
+
+							.offset-top-60
+								+post-modern-classic({
+									"titleHref": 'single-post.html',
+									"title": "Picking the Right Diagnostic Services for Efficient Results"
+								},[
+									{
+										"metaHref": "#",
+										"metaTitle": "Health"
+									},
+									{
+										"metaHref": "#",
+										"metaTitle": "News"
+									},
+									{
+										"metaHref": "#",
+										"metaTitle": "Tips"
+									},
+								],
+									[
+										{
+											"listTitle": "June 21, 2021 at 8:12pm"
+										},
+										{
+											"listHref": 'single-post.html',
+											"listClass": "",
+											"listTitle": "News"
+										}
+									],{
+									"type": "thumbnail",
+									"thumb": {"src": "images/post-10-770x480.jpg", "width": 370, "height": 240, "alt": ""},
+									"target": {"href": 'single-post.html'}
+								})
+									p Phasellus et lacus mattis, tincidunt metus sodales, tincidunt urna. Cras felis neque, iaculis vitae varius eu, luctus consectetur odio.
+
+
+						.col-md-6.offset-top-60.offset-sm-top-0
+							+post-modern-classic({
+								"titleHref": 'single-post.html',
+								"title": "Preparing for an ECG in 8 Easy Steps"
+							},
+								[
+									{
+										"metaHref": "#",
+										"metaTitle": "Health"
+									},
+									{
+										"metaHref": "#",
+										"metaTitle": "News"
+									},
+									{
+										"metaHref": "#",
+										"metaTitle": "ECG"
+									},
+								],
+								[
+									{
+										"listTitle": "June 21, 2021 at 8:12pm"
+									},
+									{
+										"listHref": 'single-post.html',
+										"listClass": "",
+										"listTitle": "News"
+									}
+								],{
+								"type": "thumbnail",
+								"thumb": {"src": "images/post-09-770x480.jpg", "width": 370, "height": 240, "alt": ""},
+								"target": {"href": 'single-post.html'}
+							})
+								p Phasellus et lacus mattis, tincidunt metus sodales, tincidunt urna. Cras felis neque, iaculis vitae varius eu, luctus consectetur odio.
+
+
+
+							.offset-top-60
+								+post-modern-classic({
+									"titleHref": 'single-post.html',
+									"title": "The Purpose and Procedure of X-ray Imaging"
+								},[
+									{
+										"metaHref": "#",
+										"metaTitle": "Health"
+									},
+									{
+										"metaHref": "#",
+										"metaTitle": "News"
+									},
+									{
+										"metaHref": "#",
+										"metaTitle": "X-ray"
+									},
+								],
+									[
+										{
+											"listTitle": "June 21, 2021 at 8:12pm"
+										},
+										{
+											"listHref": 'single-post.html',
+											"listClass": "",
+											"listTitle": "News"
+										}
+									],{
+									"type": "thumbnail",
+									"thumb": {"src": "images/post-11-770x480.jpg", "width": 370, "height": 240, "alt": ""},
+									"target": {"href": 'single-post.html'}
+								})
+									p Cras tempor eu enim id pulvinar. Proin at imperdiet felis, vel vehicula neque. Nulla quis nisl facilisis ex dignissim euismod eu vel neque.
+
+					.offset-top-50.offset-lg-top-60.text-xl-left
+						+pagination-classic(
+							1,
+							[{"href": "#"}, {"href": "#"}, {"href": "#"}, {"href": "#"}]
+						)
+
+				.col-md-10.col-lg-8.col-xl-4.offset-top-66.offset-md-top-90.offset-lg-top-0
+					.blog-grid-sidebar.inset-xl-left-30
+						include ../sections/_section-sidebar-short
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

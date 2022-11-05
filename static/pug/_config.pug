@@ -1,0 +1,140 @@
+-
+	var
+		htmlClass = "wide wow-animation scrollTo",
+		fonts = "//fonts.googleapis.com/css?family=Asap:400,500,600,700%7CLato:400italic,400,700",
+		logo = {
+			default: 'logo-default-154x53.png',
+			inverse: 'logo-inverse-154x53.png',
+			name: 'Medina diagnostic center'
+		},
+		links = {
+			post: 'blog-post.html',
+			getTemplate: '#get-template'
+		},
+		colors = {
+			primary: '#b6c062'
+		},
+		menu = [
+			{
+				title: 'Home',
+				link: 'index.html'
+			},
+			{
+				title: 'About',link: 'about.html'
+			},
+			{
+				title: 'Team',link: 'team.html'
+			},
+			{
+				title: 'Pages',
+				link: null,
+				megamenu: [
+					{
+						title: 'Elements',
+						link: null,
+						list: [
+							{title: 'Typography'},
+							{title: 'Forms'},
+							{title: 'Buttons'},
+							{title: 'Grid',link: 'grid-system.html'},
+							{title: 'Tabs and Accordions'},
+							{title: 'Progress bars'},
+							{title: 'Icons'},
+							{title: 'Tables'}
+						]
+					},
+					{
+						title: 'Pages 1',
+						link: null,
+						list: [
+							{title: 'Team Member Profile',link:'team-member.html'},
+							{title: 'Careers'},
+							{title: 'FAQ Page',link: 'faq.html'},
+							{title: 'Pricing'},
+							{title: 'Coming Soon'},
+							{title: 'Maintenance'},
+							{title: 'Under Construction'},
+							{title: 'Login/Register',link: 'login.html'}
+						]
+					},
+					{
+						title: 'Pages 2',
+						link: null,
+						list: [
+							{title: 'Clients'},
+							{title: 'Partners'},
+							{title: 'Privacy Policy'},
+							{title: 'Search Results'},
+							{title: '404 Page',link: '404.html'},
+							{title: '503 Page',link: '503.html'},
+							{title: 'Make an Appointment'}
+						]
+					}
+				]
+			},
+			{
+				title: 'Services'
+			},
+			{
+				title: 'Departments'
+			},
+			{
+				title: 'Timetable'
+			},
+			{
+				title: 'Gallery',
+				link: '#',
+				dropdown: [
+					{
+						title: 'Grid Gallery',
+						link: 'grid-gallery.html',
+					},
+					{
+						title: 'Gallery Without Padding',
+						link: 'grid-gallery-no-padding.html',
+					},
+					{
+						title: 'Masonry Gallery',
+						link: 'masonry-gallery.html',
+					},
+					{
+						title: 'Cobbles Grid',
+						link: 'cobbles-gallery.html',
+					},
+				]
+			},
+			{
+				title: 'Blog',
+				link: 'blog-masonry.html',
+				dropdown: [
+					{
+						title: 'Blog Masonry',
+						link: 'blog-masonry.html',
+					},
+					{
+						title: 'Blog Modern',
+						link: 'blog-modern.html',
+					},
+					{
+						title: 'Blog Classic',
+						link: 'blog-classic.html',
+					},
+					{
+						title: 'Blog Grid',
+						link: 'blog-grid.html',
+					},
+					{
+						title: 'Single Post',
+						link: 'single-post.html',
+					}
+				]
+			},
+			{
+				title: 'Contacts'
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home',
+		classMode

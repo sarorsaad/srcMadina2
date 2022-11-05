@@ -1,0 +1,55 @@
+//
+// Custom grid styles
+// --------------------------------------------------
+
+// Custom col
+.col-1-5{
+  width: 20%;
+}
+
+@include media-breakpoint-up(md) {
+  .col-md-1-5{
+    width: 20%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .col-lg-1-5{
+    width: 20%;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .col-xl-1-5{
+    width: 20%;
+  }
+}
+
+// Row narrow
+.row-narrow{
+  margin-left: floor(-$cell-spacing-narrow/2);
+  margin-right: ceil(-$cell-spacing-narrow/2);
+
+  > [class*="col"]{
+    padding-left: floor($cell-spacing-narrow/2);
+    padding-right: ceil($cell-spacing-narrow/2);
+  }
+}
+
+// Row gutter reset
+.row-condensed{
+  margin-left: 0;
+  margin-right: 0;
+
+  > [class*="col"]{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.container-fluid{
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  max-width: 100%;
+}

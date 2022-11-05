@@ -1,0 +1,94 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-partners-carousel
+
+//- Title
+block variables
+	- pageName = 'Partners'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+	// Meet Our Partners
+	section.section-lg.section.bg-default-liac
+		.container
+			h3.text-center Meet Our Partners
+			.offset-top-66
+				.owl-carousel-middle
+					+partners-carousel([
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-01-150x79.png", "width": 150, "height": 79, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-02-150x135.png", "width": 150, "height": 135, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-03-150x111.png", "width": 150, "height": 111, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-04-150x149.png", "width": 150, "height": 149, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-05-150x117.png", "width": 150, "height": 117, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-01-150x79.png", "width": 150, "height": 79, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-03-150x111.png", "width": 150, "height": 111, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-04-150x149.png", "width": 150, "height": 149, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-03-150x111.png", "width": 150, "height": 111, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-04-150x149.png", "width": 150, "height": 149, "alt": ""}
+						}
+					])
+	// Become a Partner
+	section.section-lg.section.bg-default
+		.container
+			h3.text-center Become a Partner
+			.row.justify-content-lg-center.offset-top-66
+				.col-lg-8
+					form.rd-mailform.text-left(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php', novalidate='novalidate')
+						.row.justify-content-sm-center.row-20
+							.col-md-6
+								.form-wrap.form-wrap-label-outside
+									label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-first-name') First name
+									input#contacts-first-name.form-input.form-input-last-child(type='text', name='first-name', data-constraints='@Required')
+								.form-wrap.form-wrap-label-outside
+									label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-email') E-mail
+									input#contacts-email.form-input.form-input-last-child(type='email', name='email', data-constraints='@Email @Required')
+							.col-md-6
+								.form-wrap.form-wrap-label-outside
+									label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-last-name') Last name
+									input#contacts-last-name.form-input.form-input-last-child(type='text', name='last-name', data-constraints='@Required')
+								.form-wrap.form-wrap-label-outside
+									label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-phone') Phone
+									input#contacts-phone.form-input.form-input-last-child(type='text', name='last-name', data-constraints='@IsNumeric @Required')
+						.form-wrap.form-wrap-label-outside
+							label.form-label.form-label-outside.text-dark.rd-input-label(for='contacts-message') Message
+							textarea#contacts-message.form-input.form-input-last-child(name='message', data-constraints='@Required', style='max-height: 150px;')
+						.offset-top-18.offset-sm-top-30.text-center.text-md-left
+							button.btn.btn-ellipse.btn-primary(type='submit', style='min-width: 130px;') send message
+
+	// Page Footer
+	include ../sections/_section-footer-default

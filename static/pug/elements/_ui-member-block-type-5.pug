@@ -1,0 +1,17 @@
+mixin member-block-type-5(img, icons, contactInfo, btn)
+  // Member block type 5
+  .member-block-type-5.inset-lg-right-20
+    img.img-responsive.center-block(src=img.src width=img.width height=img.height alt="")
+    .member-block-body
+      a(href= btn.link class= btn.class).btn= btn.text
+      address.contact-info.offset-top-20.offset-sm-top-24
+        ul.list-unstyled.p
+          each contact in contactInfo
+            li
+              span.icon.icon-xxxs.text-middle.text-primary(class= contact.class)
+              a.text-middle.d-inline-block(class= contact.type === "mail" ? "" : "text-gray-darker" href= contact.type === "mail" ? "mailto:"+contact.link  : "tel:"+contact.link)=contact.link
+      .offset-top-24
+        ul.list-inline.list-inline-xs
+          each icon in icons
+            li
+              a.icon.icon-xxs.icon-circle.icon-gray-light(class= icon.class href=icon.link)

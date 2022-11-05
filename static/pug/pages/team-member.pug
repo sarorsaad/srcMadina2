@@ -1,0 +1,267 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-member-block-type-5
+include ../elements/_ui-progress-bar-linear
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui_post-modern-classic
+
+//- Title
+block variables
+	- pageName = 'Team Member Profile'
+	- classMode = 'breadcrumbs-creative'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// team member section
+	section.section-lg.section.bg-default
+		.container
+			.row.justify-content-sm-center
+				.col-sm-10.col-lg-4
+					+member-block-type-5(
+						{
+							"width": 320,
+							"height": 320,
+							"src": "images/user-scott-riley-320x320.jpg"
+						},
+						[{
+							"class": "fa-facebook",
+							"link": "#"
+						},
+							{
+								"class": "fa-twitter",
+								"link": "#"
+							},
+							{
+								"class": "fa-google-plus",
+								"link": "#"
+							},
+							{
+								"class": "fa-rss",
+								"link": "#"
+							}],
+
+						[{
+							"type": "phone",
+							"class": "mdi mdi-phone",
+							"link": "1-800-1234-567"
+						}, {
+							"type": "mail",
+							"class": "mdi mdi-email-open",
+							"link": "mail@demolink.org"
+						}],
+
+						{
+							"link": 'make-an-appointment.html',
+							"class": "btn-ellipse btn-primary",
+							"text": "make an appointment"
+						})
+					.offset-top-34.text-md-left.inset-lg-right-20
+						h6.text-left certificates
+						hr.text-subline
+						.row.justify-content-sm-center.justify-content-md-start.offset-top-24.row-certificates(data-lightgallery="group")
+							.col-sm-8.col-md-4
+								+thumbnail-classic({
+									"type": "thumbnail",
+									"title": "",
+									"description": "",
+									"thumb": {
+										"src": "images/certifications/certificate-01-100x138.jpg",
+										"width": 100,
+										"height": 138,
+										"alt": ""
+									},
+									"target": {
+										"src": "images/certifications/certificate-01-700x970.jpg",
+										"width": 700,
+										"height": 970,
+										"alt": ""
+									}
+								})
+							.col-sm-8.col-md-4.offset-top-20.offset-sm-top-0
+								+thumbnail-classic({
+									"type": "thumbnail",
+									"title": "",
+									"description": "",
+									"thumb": {
+										"src": "images/certifications/certificate-01-100x138.jpg",
+										"width": 100,
+										"height": 138,
+										"alt": ""
+									},
+									"target": {
+										"src": "images/certifications/certificate-01-700x970.jpg",
+										"width": 700,
+										"height": 970,
+										"alt": ""
+									}
+								})
+							.col-sm-8.col-md-4.offset-top-20.offset-sm-top-0
+								+thumbnail-classic({
+									"type": "thumbnail",
+									"title": "",
+									"description": "",
+									"thumb": {
+										"src": "images/certifications/certificate-01-100x138.jpg",
+										"width": 100,
+										"height": 138,
+										"alt": ""
+									},
+									"target": {
+										"src": "images/certifications/certificate-01-700x970.jpg",
+										"width": 700,
+										"height": 970,
+										"alt": ""
+									}
+								})
+							.col-sm-8.col-md-4.offset-top-20
+								+thumbnail-classic({
+									"type": "thumbnail",
+									"title": "",
+									"description": "",
+									"thumb": {
+										"src": "images/certifications/certificate-01-100x138.jpg",
+										"width": 100,
+										"height": 138,
+										"alt": ""
+									},
+									"target": {
+										"src": "images/certifications/certificate-01-700x970.jpg",
+										"width": 700,
+										"height": 970,
+										"alt": ""
+									}
+								})
+							.col-sm-8.col-md-4.offset-top-20
+								+thumbnail-classic({
+									"type": "thumbnail",
+									"title": "",
+									"description": "",
+									"thumb": {
+										"src": "images/certifications/certificate-01-100x138.jpg",
+										"width": 100,
+										"height": 138,
+										"alt": ""
+									},
+									"target": {
+										"src": "images/certifications/certificate-01-700x970.jpg",
+										"width": 700,
+										"height": 970,
+										"alt": ""
+									}
+								})
+				.col-sm-10.col-lg-8.text-lg-left.offset-top-60.offset-md-top-0
+					.row
+						.col-md-5
+							div Position
+							h5.font-weight-bold CMO, Pathologist
+						.col-md-7.offset-top-41.offset-sm-top-0
+							div Education
+							h5.font-weight-bold Perelman School of Medicine at the University of Pennsylvania (1987)
+					.offset-top-66.text-left
+						h6 the heart of medical center
+						hr.text-subline
+						p Nullam non odio vitae velit volutpat vulputate tempor eu sapien. Phasellus porttitor diam in tellus semper, ut elementum arcu eleifend. Nullam in posuere orci, ac congue augue. Sed varius massa et tortor fermentum, a dapibus ligula varius. Duis nec elementum ante, non imperdiet libero. Sed nec ornare justo, quis vehicula mauris. Nam ornare dui vitae ex congue interdum. Donec luctus dignissim est at ultricies. Sed ullamcorper posuere leo vitae suscipit. Suspendisse ac sem at nulla pellentesque rutrum a vel diam. Morbi pretium interdum lorem nec faucibus.
+						p Aenean ac ex nunc. Phasellus tincidunt tempus enim. Sed elementum volutpat libero at pellentesque. Vestibulum interdum, dolor eget tristique dignissim, augue diam viverra ex, non malesuada ipsum mauris volutpat nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam efficitur accumsan condimentum.
+					.offset-top-66
+						h6.text-left skills
+						hr.text-subline
+						.offset-top-30
+							+progress-bar-linear({
+								"title": "Dedication",
+								"apClass": "bg-accent",
+								"value": "50"
+							})
+							.offset-top-60
+								+progress-bar-linear({
+									"title": "problem Solving",
+									"apClass": "bg-accent",
+									"value": "20"
+								})
+							.offset-top-60
+								+progress-bar-linear({
+									"title": "professionalism",
+									"apClass": "bg-accent",
+									"value": "87"
+								})
+							.offset-top-60
+								+progress-bar-linear({
+									"title": "Decision-making",
+									"apClass": "bg-accent",
+									"value": "37"
+								})
+
+	// Dr. Scott Riley’s blog posts
+	section.section-lg.section.bg-default-liac
+		.container
+			h3 Scott Riley’s Blog Posts
+			.row.justify-content-sm-center.row-40
+				.col-sm-10.col-md-8.col-lg-4
+					+post-modern-classic({
+						"titleHref": 'single-post.html',
+						"title": "Reasons to Visit a Breast Specialist"
+					},{},
+						[
+							{"listTitle": "June 21, 2021 at 8:12pm"},
+							{
+								"listHref": 'single-post.html',
+								"listClass": "text-primary",
+								"listTitle": "News"
+							}
+						],{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-13-370x250.jpg", "width": 370, "height": 250, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						.offset-top-14
+							p There are a lot of women that are unaware of the numerous risks associated with their health and eventually ignore the importance of visiting...
+				.col-sm-10.col-md-8.col-lg-4
+					+post-modern-classic({
+						"titleHref": 'single-post.html',
+						"title": "Picking the Right Diagnostic Services for Efficient Results"
+					},{},
+						[
+							{"listTitle": "June 21, 2021 at 8:12pm"},
+							{
+								"listHref": 'single-post.html',
+								"listClass": "text-primary",
+								"listTitle": "News"
+							}
+						],{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-14-370x250.jpg", "width": 370, "height": 250, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						.offset-top-14
+							p There have been a lot of cases in which people were not provided with accurate reports that eventually affected their medical treatment. There is always...
+				.col-sm-10.col-md-8.col-lg-4
+					+post-modern-classic({
+						"titleHref": 'single-post.html',
+						"title": "Preparing for an ECG in 8 Easy Steps: Tips From Our Diagnosticians"
+					},{},
+						[
+							{"listTitle": "June 21, 2021 at 8:12pm"},
+							{
+								"listHref": 'single-post.html',
+								"listClass": "text-primary",
+								"listTitle": "News"
+							}
+						],{
+						"type": "thumbnail",
+						"thumb": {"src": "images/post-15-370x250.jpg", "width": 370, "height": 250, "alt": ""},
+						"target": {"href": 'single-post.html'}
+					})
+						.offset-top-14
+							p An ECG stands for an "electrocardiogram," which is a test that measures and records the electrical activity of the heart. It is used by doctors to obtain...
+
+
+			a(href="blog-masonry.html").btn.btn-ellipse.btn-primary.offset-top-41.offset-md-top-60 view all blog posts
+
+	// Page Footer
+	include ../sections/_section-footer-default

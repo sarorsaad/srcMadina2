@@ -1,0 +1,27 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-pagination-bootstrap
+include ../elements/_widget-form-search
+
+//- Title
+block variables
+	- pageName = 'Search Results'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+	// Page Content
+	section.section-98.section-sm-124
+		.container
+			.row
+				.col-lg-8
+					+widget-form-search("input", "form-label", "search-results")
+
+					.rd-search-results.offset-top-66
+
+	include ../sections/_section-footer-default

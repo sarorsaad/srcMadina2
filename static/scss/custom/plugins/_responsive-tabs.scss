@@ -1,0 +1,884 @@
+//
+// Easy Responsive Tabs
+// --------------------------------------------------
+
+// Classic Tabs
+// --------------------------------------------------
+
+.responsive-tabs {
+	// Collapse Tab
+	.resp-accordion {
+		position: $accordion-arrow-icon-position;
+		padding: $accordion-accordion-inset;
+		overflow: hidden;
+		font-size: $accordion-size;
+		font-weight: $accordion-weight;
+		color: $accordion-color;
+		text-align: left;
+		text-overflow: ellipsis;
+		transition: color .2s ease-in;
+		
+		&:hover {
+			cursor: pointer;
+			color: $accordion-color-hover;
+		}
+		
+		.resp-arrow {
+			position: absolute;
+			top: $accordion-arrow-icon-position-top;
+			right: $accordion-arrow-icon-position-right;
+			bottom: $accordion-arrow-icon-position-bottom;
+			width: $accordion-arrow-icon-width;
+			font-family: $accordion-arrow-icon-family;
+			font-size: $accordion-arrow-icon-size;
+			font-weight: $accordion-arrow-icon-weight;
+			text-align: center;
+			color: $gray-dark;
+			transition: .2s;
+			
+			&:before {
+				content: $accordion-arrow-icon;
+			}
+		}
+		
+		// Active tab accordion
+		&.resp-tab-active {
+			color: $accordion-active-color;
+			
+			.resp-arrow:before {
+				content: $accordion-arrow-icon-active;
+			}
+		}
+	}
+	
+	// Accordion Content
+	.resp-tab-content {
+		padding: $accordion-content-inset;
+	}
+	
+	// Tabs List
+	.resp-tabs-list {
+		display: none;
+		padding: 0;
+		margin-bottom: 0;
+		
+		li {
+			position: relative;
+			display: inline-block;
+			padding: $accordion-list-inset;
+			font-size: $accordion-list-size;
+			font-weight: $accordion-list-weight;
+			color: $accordion-list-color;
+			text-transform: uppercase;
+			list-style-type: none;
+			cursor: pointer;
+			transition: color .2s ease-in;
+			
+			&.resp-tab-active,
+			&:hover {
+				color: $accordion-list-active-color !important;
+			}
+		}
+	}
+	
+	// Tab Content
+	.resp-tab-content {
+		display: none;
+	}
+	
+	// Turn accordion to Horizontal Tabs
+	@include media-breakpoint-up(lg) {
+		&[data-type="horizontal"],
+		&[data-type="vertical"] {
+			border-bottom: $accordion-md-border-bottom;
+			
+			.resp-tab-content + .resp-accordion {
+				border-top: $accordion-md-border-top;
+			}
+			
+			.resp-accordion {
+				display: none;
+			}
+			
+			.resp-tabs-list {
+				display: flex;
+				max-width: 1000px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: left;
+			}
+		}
+	}
+	
+	// Style for vertical tabs
+	@include media-breakpoint-up(xl) {
+		&[data-type="vertical"] {
+			display: flex;
+			flex: 0 1 auto;
+			align-items: flex-start;
+			
+			.resp-tabs-list {
+				text-align: left;
+				flex-basis: 23%;
+				
+				li {
+					display: block;
+				}
+				
+				li + li {
+					margin-left: 0;
+				}
+			}
+			
+			.resp-tabs-container {
+				flex-basis: 75%;
+				padding-left: 3%;
+			}
+		}
+	}
+}
+
+// Classic Tabs
+// --------------------------------------------------
+
+.responsive-tabs-classic {
+	border-bottom: $accordion-border;
+	border-top: $accordion-border;
+	
+	.resp-tab-content + .resp-accordion {
+		border-top: $accordion-border;
+	}
+	
+	@include media-breakpoint-up(lg) {
+		&[data-type="vertical"],
+		&[data-type="horizontal"] {
+			border-top: none;
+			border-bottom: $accordion-tabs-list-border-bottom;
+			
+			.resp-tab-content + .resp-accordion {
+				border-top: $accordion-tabs-list-border-top;
+			}
+			
+			.resp-tabs-list {
+				border-bottom: 1px solid $gray-light;
+				
+				li {
+					font-size: 18px;
+					line-height: (24/18);
+					font-family: $font-family-base;
+					letter-spacing: 0.06em;
+					color: $gray-dark;
+					font-weight: 400;
+					
+					&:before {
+						position: $accordion-tabs-border-position;
+						left: $accordion-tabs-border-position-left;
+						bottom: $accordion-tabs-list-border-position-bottom;
+						width: $accordion-tabs-list-border-width;
+						height: $accordion-tabs-list-border-height;
+						background-color: $accordion-tabs-list-border-background;
+						content: '';
+						transform: translateX(-50%);
+					}
+					
+					&.resp-tab-active {
+						color: $gray-darker;
+						
+						&:before {
+							width: $accordion-tabs-list-border-active-width;
+						}
+					}
+				}
+				
+				li + li {
+					margin-left: $accordion-tabs-list-offset-left;
+				}
+			}
+			
+			// Tab Content
+			.resp-tab-content {
+				padding: $accordion-tabs-content-inset-top 5px 17px 2px;
+			}
+		}
+	}
+	
+	// Turn Horizontal Tabs to Vertical Tabs
+	@include media-breakpoint-up(xl) {
+		// Style for horizontal tabs
+		&[data-type="horizontal"] {
+			.resp-tabs-list {
+				
+				li + li {
+					margin-left: $accordion-horizontal-tabs-list-lg-left-offset;
+				}
+			}
+		}
+		
+		// Style for vertical tabs
+		&[data-type="vertical"] {
+			
+			.resp-tabs-list {
+				border-bottom: none;
+				border-right: $accordion-vertical-tabs-list-lg-border-left;
+				
+				li {
+					padding: $accordion-vertical-tabs-list-lg-inset;
+					text-align: right;
+					
+					&:before {
+						position: $accordion-vertical-tabs-list-lg-border-position;
+						top: $accordion-vertical-tabs-list-lg-border-position-top;
+						left: auto;
+						right: $accordion-vertical-tabs-list-lg-border-position-left;
+						height: $accordion-vertical-tabs-list-lg-border-height;
+						content: '';
+						transform: translateY(-50%);
+					}
+					
+					&.resp-tab-active {
+						&:before {
+							height: $accordion-vertical-tabs-list-lg-active-height;
+							width: $accordion-vertical-tabs-list-lg-active-width;
+						}
+					}
+				}
+				
+				li + li {
+					margin-left: $accordion-vertical-tabs-list-lg-offset-left;
+					margin-top: $accordion-vertical-tabs-list-lg-offset-top;
+				}
+				
+			}
+			
+			.resp-tab-content {
+				padding-top: $accordion-vertical-tabs-content-lg-inset-top;
+			}
+		}
+	}
+}
+
+// Boxed Tabs
+// --------------------------------------------------
+
+.responsive-tabs-boxed {
+	// Collapse Tab
+	.resp-accordion {
+		border-radius: $border-radius-small;
+		border: $accordion-tabs-boxed-border;
+		padding-left: $accordion-tabs-boxed-inset-left;
+		padding-right: $accordion-tabs-boxed-inset-right;
+		
+		.resp-arrow {
+			right: $accordion-tabs-boxed-arrow-position-right;
+		}
+	}
+	
+	// Tab Content
+	.resp-tab-content {
+		padding-left: $accordion-tabs-boxed-content-inset-left-and-right;
+		padding-right: $accordion-tabs-boxed-content-inset-left-and-right;
+		border-bottom: $accordion-tabs-boxed-content-border;
+		border-right: $accordion-tabs-boxed-content-border;
+		border-left: $accordion-tabs-boxed-content-border;
+		border-bottom-left-radius: $border-radius-small;
+		border-bottom-right-radius: $border-radius-small;
+	}
+	
+	.resp-tab-content + .resp-accordion {
+		margin-top: $accordion-tabs-boxed-content-offset-top;
+	}
+	
+	// Active tab
+	.resp-tab-active {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		border-bottom: $accordion-tabs-boxed-active-border-bottom;
+	}
+	
+	// Turn accordion to Horizontal Tabs
+	@include media-breakpoint-up(lg) {
+		&[data-type="horizontal"],
+		&[data-type="vertical"] {
+			.resp-tabs-list {
+				font-size: 0;
+				border-bottom: $accordion-tabs-boxed-list-md-border-bottom;
+				
+				li {
+					position: relative;
+					padding: $accordion-tabs-boxed-list-inset;
+					margin-bottom: -1px;
+					font-size: $accordion-tabs-boxed-list-size;
+					font-weight: $accordion-tabs-boxed-list-weight;
+					letter-spacing: $accordion-tabs-boxed-list-letter-spacing;
+					color: $accordion-tabs-boxed-list-letter-color;
+					text-transform: uppercase;
+					background: $gray-light;
+					border-top: $accordion-tabs-boxed-list-md-li-border-top;
+					border-bottom: $accordion-tabs-boxed-list-md-li-border-bottom;
+					border-left: $accordion-tabs-boxed-list-md-li-border-left;
+					
+					&:last-child {
+						border-right: $accordion-tabs-boxed-list-md-border-bottom;
+					}
+					
+					&:after {
+						position: $accordion-tabs-boxed-list-md-li-after-position;
+						bottom: $accordion-tabs-boxed-list-md-li-after-position-bottom;
+						left: $accordion-tabs-boxed-list-md-li-after-position-left;
+						width: $accordion-tabs-boxed-list-md-li-after-position-width;
+						border-bottom: $accordion-tabs-boxed-list-md-li-after-border-bottom;
+						content: '';
+					}
+					
+					&.resp-tab-active {
+						border-bottom-color: $accordion-tabs-boxed-list-md-active-border-bottom-color;
+					}
+					
+					&.resp-tab-active {
+						background: $accordion-tabs-boxed-list-md-active-background-color;
+						
+						&:after {
+							width: $accordion-tabs-boxed-list-md-active-after-width;
+						}
+					}
+				}
+			}
+			
+			.resp-tab-content + .resp-accordion {
+				margin-top: $accordion-tabs-boxed-list-md-offset-top;
+			}
+			
+			.resp-tab-content {
+				border-bottom: $accordion-tabs-boxed-content-md-border-bottom;
+				border-right: $accordion-tabs-boxed-content-md-border-right;
+			}
+			
+			.resp-tab-content {
+				padding: $accordion-tabs-boxed-content-md-inset;
+			}
+		}
+		
+		// Turn Horizontal Tabs to Vertical Tabs
+		@include media-breakpoint-up(xl) {
+			&[data-type="vertical"] {
+				border-top: $accordion-tabs-boxed-lg-border-top;
+				
+				.resp-tabs-list {
+					margin: $accordion-tabs-boxed-list-lg-offsets;
+					border-top: $accordion-tabs-boxed-list-lg-border-top;
+					border-bottom: $accordion-tabs-boxed-list-lg-border-bottom;
+					border-right: $accordion-tabs-boxed-list-md-border-bottom;
+					
+					li {
+						border-top: $accordion-tabs-boxed-list-lg-li-border-top;
+						border-right: $accordion-tabs-boxed-list-lg-li-border-right;
+						
+						&:first-child {
+							border-top: $accordion-tabs-boxed-list-lg-li-first-item-border-top;
+						}
+						
+						&:last-child {
+							border-bottom: $accordion-tabs-boxed-list-lg-li-last-item-border-bottom;
+							border-right: none;
+						}
+						
+						&:after {
+							position: absolute;
+							top: $accordion-tabs-boxed-list-lg-li-after-position-top;
+							bottom: $accordion-tabs-boxed-list-lg-li-after-position-bottom;
+							left: $accordion-tabs-boxed-list-lg-li-after-position-left;
+							right: $accordion-tabs-boxed-list-lg-li-after-position-right;
+							width: $accordion-tabs-boxed-list-lg-li-after-width;
+							border-right: $accordion-tabs-boxed-list-lg-li-after-border-right;
+							content: '';
+						}
+						
+						&.resp-tab-active {
+							&:after {
+								height: $accordion-tabs-boxed-list-lg-active-after-height;
+							}
+						}
+					}
+				}
+				
+				.resp-tab-content {
+					padding: $accordion-tabs-boxed-list-lg-inset;
+					border-left: none;
+				}
+			}
+		}
+	}
+}
+
+// Horizontal dashed tabs
+// --------------------------------------------------
+
+.responsive-tabs-dashed {
+	// Collapse Tab
+	.resp-accordion {
+		border-radius: $border-radius-small;
+		border: $accordion-tabs-boxed-border;
+		padding: 10px 40px 10px 20px;
+		background: $white !important;
+		
+		.resp-arrow {
+			top: 7px;
+			right: 15px;
+		}
+	}
+	
+	// Tab Content
+	.resp-tab-content {
+		padding: 15px;
+		border-bottom: $accordion-tabs-boxed-content-border;
+		border-right: $accordion-tabs-boxed-content-border;
+		border-left: $accordion-tabs-boxed-content-border;
+		border-bottom-left-radius: $border-radius-small;
+		border-bottom-right-radius: $border-radius-small;
+		background: $white;
+		
+		.form-input {
+			background: $white;
+		}
+		
+		.form-label {
+			color: $gray-darkest;
+			
+			&.focus {
+				color: $primary;
+			}
+		}
+	}
+	
+	.resp-tabs-list {
+		> li {
+			position: relative;
+			padding: 0;
+			font-size: $accordion-tabs-boxed-list-size;
+			font-weight: $accordion-tabs-boxed-list-weight;
+			letter-spacing: $accordion-tabs-boxed-list-letter-spacing;
+			color: $gray-dark;
+			text-transform: uppercase;
+			
+			&.resp-tab-active,
+			&:hover {
+				color: $gray-darker;
+			}
+			
+			& + li {
+				padding: 0;
+				margin-left: 39px;
+				
+				&:before {
+					position: absolute;
+					left: -20px;
+					content: '';
+					height: 100%;
+					width: 1px;
+					background: $gray-dark;
+				}
+			}
+		}
+	}
+	
+	.resp-tab-content + .resp-accordion {
+		margin-top: $accordion-tabs-boxed-content-offset-top;
+	}
+	
+	// Active tab
+	.resp-tab-active {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	
+	// Turn accordion to Horizontal Tabs
+	@include media-breakpoint-up(lg) {
+		.resp-tab-content {
+			background: transparent;
+			padding: 0;
+			border: none;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.responsive-tabs-padding-none {
+		.responsive-tabs-classic[data-type="vertical"] .resp-tab-content, .responsive-tabs-classic[data-type="horizontal"] .resp-tab-content {
+			padding: 0;
+		}
+	}
+}
+
+
+
+
+/** @section Nav custom */
+
+// Corporate style
+$tabs-corporate-color: $body-color;
+$tabs-corporate-background: transparent;
+$tabs-corporate-active-color: $white;
+$tabs-corporate-active-background: $primary;
+$tabs-corporate-border: #e5e7e9;
+
+// Base styles
+.tabs-custom {
+	text-align: left;
+	.nav-tabs {
+		font-size: 0;
+		line-height: 0;
+		word-spacing: 0;
+		border: 0;
+		
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+	
+	.nav-item {
+		float: none;
+		border: 0;
+		cursor: pointer;
+		transition: .33s all ease;
+	}
+	
+	.nav-link {
+		margin: 0;
+		border-radius: 0;
+		border: 0;
+	}
+	
+	.nav-link.active {
+		cursor: default;
+	}
+}
+
+.tab-content > .tab-pane {
+	display: block;
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+}
+
+.tab-content > .active {
+	visibility: visible;
+	height: auto;
+	overflow: visible;
+}
+
+// Offsets
+* + .tabs-horizontal.tabs-corporate {
+	margin-top: 40px;
+}
+
+* + .tabs-vertical.tabs-corporate {
+	margin-top: 40px;
+}
+
+@include media-breakpoint-up(md) {
+	* + .tabs-vertical.tabs-corporate {
+		margin-top: 60px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	* + .tabs-vertical.tabs-corporate {
+		margin-top: 80px;
+	}
+}
+
+// Tabs line
+.tabs-line {
+	.nav-tabs {
+		position: relative;
+	}
+	
+	.nav-link {
+		text-transform: uppercase;
+		font-size: 13px;
+		font-weight: 500;
+		line-height: 1.4;
+		text-align: center;
+		vertical-align: middle;
+	}
+	
+	* + .tab-content {
+		margin-top: 20px;
+	}
+	
+	@include media-breakpoint-down(md) {
+		.nav-tabs {
+			max-width: 100%;
+			border: 1px solid $tabs-corporate-border;
+		}
+		
+		.nav-item {
+			margin: -1px;
+		}
+		
+		.nav-link {
+			padding: 7px 10px;
+			color: $tabs-corporate-color;
+			background: $tabs-corporate-background;
+			border-bottom: 1px solid $tabs-corporate-border;
+			
+			&:first-child {
+				border-top: 1px solid $tabs-corporate-border;
+			}
+		}
+		
+		.nav-link:hover,
+		.nav-link.active {
+			color: $tabs-corporate-active-color;
+			background: $primary;
+			border-color: $primary;
+		}
+	}
+}
+
+// Tabs corporate style
+.tabs-corporate {
+	.nav-tabs {
+		position: relative;
+		@include group(10px);
+	}
+	
+	.nav-link {
+		padding: 10px 10px;
+		text-transform: uppercase;
+		font-size: 18px;
+		line-height: 1.4;
+		color: $tabs-corporate-color;
+		background: $tabs-corporate-background;
+		border: 1px solid $tabs-corporate-border;
+		text-align: center;
+		vertical-align: middle;
+	}
+	
+	.nav-link:hover,
+	.nav-link.active {
+		background: none;
+		color: $primary;
+	}
+	
+	.tab-content {
+		padding: 30px 0 0;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	// Horizontal tabs
+	.tabs-horizontal {
+		&.tabs-corporate {
+			.nav-tabs {
+				position: relative;
+				width: 100%;
+				display: block;
+				text-align: center;
+				border: 0;
+				will-change: transform;
+			}
+			
+			.nav-item {
+				display: inline-block;
+				will-change: transform;
+			}
+			
+			.nav-link {
+				display: block;
+				position: relative;
+				z-index: 1;
+				min-width: 130px;
+				letter-spacing: .1em;
+				padding: 13px 20px;
+				border: 2px solid $tabs-corporate-border;
+				
+				&,
+				&::before {
+					transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+				}
+				
+				&::before {
+					content: '';
+					position: absolute;
+					top: -1px;
+					left: -1px;
+					width: calc(100% + 2px);
+					height: calc(100% + 2px);
+					z-index: -1;
+					opacity: 0;
+					transform: scale3d(0.7, 1, 1);
+					transition: transform 0.4s, opacity 0.4s;
+					transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+					background: $tabs-corporate-active-background;
+				}
+			}
+			
+			.nav-link.active,
+			.nav-link:hover {
+				color: $tabs-corporate-active-color;
+				border-color: $tabs-corporate-active-background;
+				background-color: transparent;
+				
+				&::before {
+					opacity: 1;
+					transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+				}
+			}
+		}
+		
+		&.tabs-line {
+			.nav-tabs {
+				border: 0;
+				border-bottom: 4px solid $gray-200;
+			}
+			
+			.nav-item {
+				display: inline-block;
+				
+				&:not(:last-child) {
+					margin-right: 52px;
+				}
+			}
+			
+			.nav-link {
+				position: relative;
+				padding: 0 0 15px 0;
+				background-color: transparent;
+				color: $gray-500;
+				border: 0;
+				
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: -4px;
+					left: 0;
+					height: 4px;
+					width: 0;
+					background: $primary;
+					transition: .22s ease;
+				}
+			}
+			
+			.nav-link.active,
+			.nav-link:hover {
+				color: $gray-300;
+			}
+			
+			.nav-link.active {
+				&::after {
+					width: 100%;
+				}
+			}
+			
+			* + .tab-content {
+				margin-top: 30px;
+			}
+		}
+	}
+	
+	// Vertical tabs
+	.tabs-vertical {
+		display: flex;
+		align-items: flex-start;
+		
+		.nav-tabs {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			flex-shrink: 0;
+			max-width: 50%;
+		}
+		
+		.nav-item {
+			border: 0;
+			width: 100%;
+			text-align: left;
+			
+		}
+		.nav-link{
+			position: relative;
+			display: block;
+			border: none;
+			&:before{
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 1px;
+				display: block;
+				background-color: $primary;
+				z-index: 2;
+				opacity: 0;
+				transition: $transition-base;
+			}
+		}
+		.nav-link.active,
+		.nav-link:hover {
+			color: $primary;
+			&:before{
+				opacity: 1;
+				transition: $transition-base;
+			}
+		}
+		
+		.tab-content {
+			flex-grow: 1;
+		}
+		
+		// Tabs corporate
+		&.tabs-corporate {
+			.nav-tabs {
+				
+				border-right: 1px solid #bdbdbd;
+				width: auto;
+			}
+			
+			.nav-item {
+				margin: 0;
+			}
+			
+			.nav-link {
+				position: relative;
+				padding: 0 30px 0 0;
+				overflow: hidden;
+				text-align: right;
+				
+			}
+			
+			.nav-item + .nav-item {
+				margin-top: 25px;
+			}
+			
+			.tab-content {
+				padding: 0 0 0 30px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	// Horizontal tabs
+	.tabs-horizontal {
+		
+		// Tabs Corporate
+		&.tabs-corporate {
+			.tab-content {
+				padding: 30px 30px 0;
+			}
+		}
+	}
+	
+	// Vertical tabs
+	.tabs-vertical {
+		
+		// Tabs corporate
+		&.tabs-corporate {
+			.tab-content {
+				padding: 0 0 0 45px;
+			}
+		}
+	}
+}

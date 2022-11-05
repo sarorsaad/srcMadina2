@@ -1,0 +1,67 @@
+//
+// Labels
+// --------------------------------------------------
+
+.badge {
+  padding: $label-padding;
+}
+
+// Labels styles
+// --------------------------------------------------
+
+.badge-custom {
+  display: inline-block;
+  padding: $label-custom-padding;
+  font-size: $label-custom-size;
+  font-weight: $label-custom-weight;
+  line-height: $label-custom-line-height;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: .06em;
+  transition: .3s;
+
+  h1 &, h2 &, h3 &, h4 &, h5 &, h6 &, p &{
+    margin-left: $label-custom-title-offset-left;
+  }
+
+  &,&:hover,&:focus{
+    color: $label-custom-hover;
+  }
+}
+
+.badge-ellipsis-custom {
+  border-radius: $label-ellipsis-custom-border-radius;
+}
+
+.badge-rounded-custom {
+  border-radius: $label-rounded-custom;
+}
+
+// Labels sizes
+// --------------------------------------------------
+
+.badge-xs-custom {
+  padding: $label-xs-custom-padding;
+}
+
+.badge-sm-custom {
+  padding: $label-sm-custom-padding;
+}
+
+.badge-lg-custom {
+  font-size: $label-lg-custom-size;
+  padding: $label-lg-custom-padding;
+}
+
+.badge-xl-custom {
+  font-size: $label-xl-custom-size;
+  padding: $label-xl-custom-padding;
+}
+
+
+// Labels colors
+// --------------------------------------------------
+
+
+

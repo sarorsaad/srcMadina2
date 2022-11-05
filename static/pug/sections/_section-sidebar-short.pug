@@ -1,0 +1,94 @@
+//- Includes
+include ../elements/_widget-form-search
+include ../elements/_widget-flickrfeed
+
+// Aside
+aside.text-left
+	// Search in Blog
+	div
+		h6 Search in Blog
+		hr.text-subline
+
+		.offset-top-14.offset-md-top-20.rd-search-blog
+			+widget-form-search(null, null, "blog-classic-form-search-widget")
+
+	// Archive
+	div.offset-top-30.offset-md-top-60
+		h6 Archive
+		hr.text-subline
+
+	.offset-top-14.offset-md-top-20
+		.row.justify-content-sm-center.justify-content-xl-start
+			.col-sm-6.col-xl-5
+				// List Marked
+				ul.list.list-marked.inset-left-0.list-marked-icon.text-dark.list-marked-gray
+					li
+						a(href="#") Jan 2021
+					li
+						a(href="#") Mar 2021
+					li
+						a(href="#") Apr 2021
+					li
+						a(href="#") May 2021
+
+			.col-sm-6.col-xl-5.offset-top-10.offset-xs-top-0.inset-sm-left-5
+				// List Marked
+				ul.list.list-marked.inset-left-0.list-marked-icon.text-dark.list-marked-gray
+					li
+						a(href="#") Jul 2021
+					li
+						a(href="#") Sep 2021
+					li
+						a(href="#") Oct 2021
+
+	// Flickr @fasttravel
+	div.offset-top-30.offset-md-top-60
+		h6 gallery
+		hr.text-subline
+
+	.offset-top-14.offset-md-top-20
+		.row.row-10.row-narrow-10.justify-content-center(data-lightgallery='group')
+			.col-6.col-md-4.col-xl-6
+				a.thumbnail-classic(data-lightgallery='item' href="images/gallery-01_original.jpg" )
+					img(width="165" height="165" src='images/sidebar-img-01-165x165.jpg', alt='')
+			.col-6.col-md-4.col-xl-6
+				a.thumbnail-classic(data-lightgallery='item' href="images/gallery-02_original.jpg" )
+					img(width="165" height="165" src='images/sidebar-img-02-165x165.jpg', alt='')
+			.col-6.col-md-4.col-xl-6
+				a.thumbnail-classic(data-lightgallery='item' href="images/gallery-03_original.jpg" )
+					img(width="165" height="165" src='images/sidebar-img-03-165x165.jpg', alt='')
+			.col-6.col-md-4.col-xl-6
+				a.thumbnail-classic(data-lightgallery='item' href="images/gallery-04_original.jpg" )
+					img(width="165" height="165" src='images/sidebar-img-04-165x165.jpg', alt='')
+			.col-6.col-md-4.col-xl-6
+				a.thumbnail-classic(data-lightgallery='item' href="images/gallery-05_original.jpg" )
+					img(width="165" height="165" src='images/sidebar-img-05-165x165.jpg', alt='')
+			.col-6.col-md-4.col-xl-6
+				a.thumbnail-classic(data-lightgallery='item' href="images/gallery-06_original.jpg" )
+					img(width="165" height="165" src='images/sidebar-img-06-165x165.jpg', alt='')
+
+
+	// Recent Posts
+	div.offset-top-30.offset-md-top-60
+		h6 Recent Posts
+		hr.text-subline
+
+	.offset-top-14.offset-md-top-20
+		// List Marked
+		ul.list.list-marked.list-marked-icon.text-dark.inset-left-0.list-marked-gray
+			li
+				a.font-weight-bold(href= 'single-post.html') Reasons to Visit a Breast Specialist
+				br
+				time(datetime="2021-04-30").text-gray-dark June 21, 2021 at 8:12pm
+			li
+				a.font-weight-bold(href= 'single-post.html') Preparing for an ECG in 8 Easy Steps
+				br
+				time(datetime="2021-04-30").text-gray-dark June 21, 2021 at 8:12pm
+			li
+				a.font-weight-bold(href= 'single-post.html') Picking the Right Diagnostic Services for Efficient Results
+				br
+				time(datetime="2021-04-30").text-gray-dark June 21, 2021 at 8:12pm
+			li
+				a.font-weight-bold(href= 'single-post.html') The Purpose and Procedure of X-ray Imaging
+				br
+				time(datetime="2021-04-30").text-gray-dark June 21, 2021 at 8:12pm

@@ -1,0 +1,158 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-box-icon-type-2
+include ../elements/_ui-testimonials-type-1
+
+//- Title
+block variables
+	- pageName = 'Typography'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	section.section-lg.section.bg-default
+		.container
+			.row.justify-content-md-center.justify-content-lg-start.text-left.row-xl-50
+				.col-md-10.col-lg-12
+					h1= "h1 Asap 80pt/100pt/0.4 "
+
+					p.
+						In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+					p.
+						Praesent vulputate, justo eu condimentum egestas, augue arcu sagittis nibh, nec aliquam dui urna vel erat. Cras condimentum eros est, nec iaculis felis fermentum a. Aenean eget sapien eros. Vestibulum at arcu commodo, mollis mauris vel, tincidunt odio. Vestibulum eu arcu volutpat, aliquam odio a, consequat risus. Curabitur fermentum luctus ipsum. Donec ut egestas felis.
+				.col-md-10.col-lg-8
+					h2= "h2 Asap 60pt/72pt/0.2 "
+					p.
+						In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+				.col-md-10.col-lg-8
+					h3= "h3 Asap 46pt/52pt/0.3 "
+					p.
+						In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+				.col-md-10.col-lg-8
+					h4= "H4 Lato 24pt/32pt "
+					p.
+						In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+				.col-md-10.col-lg-8
+					h5= "H5 Lato 22pt/28pt "
+					p.
+						In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+				.col-md-10.col-lg-8
+					h6= "h6 Asap 18pt/24pt/0.6 "
+					p.
+						In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+				.col-md-10.col-lg-8
+						h6 blockquote
+						hr.text-subline
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-betty-wade-60x60.jpg",
+								"alt": ""
+							},
+							"Betty Wade",
+							"Customer",
+							"The costs of treatments are very reasonable at Medina and I have always been impressed with the results. The fully medically qualified team at the clinic are professional, friendly and trustworthy."
+						)
+
+				.col-md-10.col-lg-8
+						h6 HTML Text Elements
+						hr.text-subline
+						p
+							a(href="#")=' Link Text'
+							=' At Medina Medical Center of San Diego, our healthcare team has a slogan: Caring for Life. '
+							span.font-weight-bold='This is a bold text '
+							mark='Highlighted text'
+							span.font-italic=' Italic text '
+							span.text-gray(data-toggle='tooltip', data-placement='top', title='Medical Center')=' Tooltips '
+							span.text-strike=' Strickethough Text'
+							span.text-underline=' Underlined Text '
+							| It symbolizes the variety of capabilities and services we bring to you. In essence, it represents a spirit and a passion for delivering the best medical care — in partnership with you with a focus on improving your health and your life. In practice, it has become the touchstone for a well-coordinated and systematic approach that teams physicians, nurses and support personnel in the pursuit of wellness.
+
+				.col-md-10.col-lg-8
+						h6 Unordered and Ordered Lists
+						hr.text-subline
+						p Our professional staff provides the following services:
+						ul.list.list-marked
+							li Best Equipment
+							li Ultrasound Diagnostics
+							li X-ray Diagnostics
+							li Pediatrics
+						p Our professional staff provides the following services:
+						ol(type="1").list.list-numbered
+							li
+								span Best Equipment
+							li
+								span Ultrasound Diagnostics
+							li
+								span X-ray Diagnostics
+							li
+								span Pediatrics
+
+
+
+	section.section-lg.bg-default.section
+		.container
+			.row.justify-content-md-center.justify-content-lg-start.text-left
+				.col-md-10.col-lg-12
+					h6 Icon List
+					hr.text-subline
+					.row.row-30
+						.col-lg-4.inset-lg-right-30
+							+box-icon-type-2("icon icon-lg icon-circle icon-primary icon-pills-01", "Qualified Specialists", "font-weight-bold text-primary", "Donec augue eros, cursus sit amet justo sit amet, fringilla blandit velit. In tempor enim a leo tristique, eget consequat tortor suscipit. ")
+
+						.col-lg-4.inset-lg-right-30
+							+box-icon-type-2("icon icon-lg icon-circle icon-primary icon-doctor-01", "Modern Equipment", "font-weight-bold text-primary", "Donec augue eros, cursus sit amet justo sit amet, fringilla blandit velit. In tempor enim a leo tristique, eget consequat tortor suscipit. ")
+
+						.col-lg-4.inset-lg-right-20
+							+box-icon-type-2("icon icon-lg icon-circle icon-primary icon-medical-car-01", "Emergency Diagnostics", "font-weight-bold text-primary", "Donec augue eros, cursus sit amet justo sit amet, fringilla blandit velit. In tempor enim a leo tristique, eget consequat tortor suscipit. ")
+
+		section.section.bg-default.section-lg
+			.container
+				.row.justify-content-md-center.justify-content-lg-start.text-left
+					.col-md-10.col-lg-8
+						h6 Image Centered
+						hr.text-subline
+						+img-set-dimensions('images/typography-01-770x420.jpg', '')
+						p
+							span.text-gray-darker='Quality Diagnostic Services'
+
+						.offset-top-20
+							p In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+
+		section.section.section-lg.bg-default
+			.container
+				.row
+					.col-md-8
+						.row.justify-content-md-center.justify-content-lg-start.text-left
+							.col-12
+								h6 Image LEFT
+								hr.text-subline
+								.row.offset-top-30
+									.col-md-6
+										+img-set-dimensions('images/typography-02-340x220.jpg', ' pull-sm-left')
+									.col-md-6.offset-top-30.offset-sm-top-0
+										p In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+
+
+		section.section.section-lg.bg-default
+			.container
+				.row
+					.col-md-8
+						h6 Image Right
+						hr.text-subline
+						.row.flex-lg-row-reverse.offset-top-30
+							.col-md-6
+								+img-set-dimensions('images/typography-02-340x220.jpg', ' pull-sm-right')
+							.col-md-6.offset-top-30.offset-sm-top-0
+								p In dictum est eget purus aliquet placerat. Vivamus justo turpis, tincidunt at purus in, semper eleifend risus. Pellentesque euismod tristique nisi sed varius. Vestibulum vitae turpis ut ipsum ullamcorper pulvinar vel non lorem. Duis tincidunt nisl et aliquam facilisis. Cras placerat et nulla in dignissim. Ut volutpat lacus nisi, vitae sagittis purus finibus et. Suspendisse aliquet risus nec dui hendrerit pharetra. Etiam finibus urna dictum turpis molestie varius. Curabitur finibus nisi diam.
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,138 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-pagination-classic
+include ../elements/_ui-thumbnail-custom
+include ../elements/_ui-isotope
+
+//- Title
+block variables
+	- pageName = 'Masonry Gallery'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	section.section-lg.section.bg-default
+		.container
+			+isotope(['All', 'Health Care', 'Diagnostics', 'Team'],{
+				"group": "gallery",
+				"layout": "masonry",
+				"alignClass": "isotope-filters-horizontal"
+			}, "isotope-1")
+				.row.row-30(data-lightgallery="group")
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Health Care")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "Quality Health Care",
+							"thumb": {"src": "images/gallery/gallery-10-370x510.jpg", "width": 370, "height": 510, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-01_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Team")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "Experienced Diagnosticians",
+							"thumb": {"src": "images/gallery/gallery-02-370x240.jpg", "width": 370, "height": 240, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-02_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Diagnostics")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "individual Consultations",
+							"thumb": {"src": "images/gallery/gallery-03-370x240.jpg", "width": 370, "height": 240, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-03_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Diagnostics")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "ultrasound diagnostics",
+							"thumb": {"src": "images/gallery/gallery-11-370x510.jpg", "width": 370, "height": 510, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-05_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Health Care")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "unrivaled Expertise",
+							"thumb": {"src": "images/gallery/gallery-06-370x240.jpg", "width": 370, "height": 240, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-06_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Diagnostics")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "Constant Improvement",
+							"thumb": {"src": "images/gallery/gallery-04-370x240.jpg", "width": 370, "height": 240, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-04_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Health Care")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "Best Equipment",
+							"thumb": {"src": "images/gallery/gallery-12-370x510.jpg", "width": 370, "height": 510, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-09_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Health Care")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "Dental Laboratory",
+							"thumb": {"src": "images/gallery/gallery-07-370x240.jpg", "width": 370, "height": 240, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-07_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+					.col-12.col-md-6.col-lg-4.isotope-item(data-filter="Health Care")
+						+thumbnail-custom({
+							"type": "thumbnail",
+							"title": "Family Health Services",
+							"thumb": {"src": "images/gallery/gallery-08-370x240.jpg", "width": 370, "height": 240, "alt": ""},
+							"target": {
+								"src": "images/gallery/originals/gallery-08_original.jpg",
+								"width": 1200,
+								"height": 800,
+								"alt": ""
+							}
+						})
+
+	// Page Footer
+	include ../sections/_section-footer-default

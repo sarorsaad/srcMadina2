@@ -1,0 +1,15 @@
+//-title - box title
+//-price - box-price
+//-period - box period
+//-state - active/not
+//- btnText - button text
+mixin box-planning-2(icon, title, price, period, titleStyle, svgStyle, dividerStyle, btnText, btnStyle, state)
+  // Planning Box type 2
+  .box-planning.box-planning-type-2(class=(state != null ? 'active' : ''))
+    .icon.icon-sm.text-primary(class= icon)
+    .offset-top-14
+      h5.text-primary.font-weight-bold= title
+    .offset-top-41
+      block
+    a.btn.btn-ellipse.btn-primary(href='#')= btnText
+

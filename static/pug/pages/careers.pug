@@ -1,0 +1,214 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include  ../elements/_ui_accordion-classic
+
+//- Title
+block variables
+	- pageName = 'Careers'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// join our team
+	section.section-lg.section.bg-default
+		.container.text-left
+			.row.justify-content-sm-center.row-30
+				.col-md-9.col-xl-6
+					h3 Join Our Team
+					.offset-top-20.offset-lg-top-66
+						p Nunc dignissim tortor augue, et semper quam aliquet et.  Mauris vel felis ac neque egestas condimentum at consectetur turpis. Vivamus sed laoreet neque. Suspendisse vel eros nibh. Suspendisse potenti. Sed non viverra orci, eu volutpat diam.
+					.offset-top-20
+						a(href="#").btn.btn-ellipse.btn-primary send your cv
+
+				.col-xl-6
+					+img-set-dimensions('images/pages-careers-570x320.jpg', 'img-responsive veil reveal-lg-inline-block')
+
+	// your career starts here
+	section.section-lg.section.bg-default-liac
+		.container
+			h3 Your Career Starts Here
+			.row.text-left
+				.col-md-6.col-lg-3
+					.box-skin-1
+						h5.font-weight-bold
+							a(href="#").text-darkest Diagnostic Medical Sonographer
+						.offset-top-20
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-calendar-clock.text-primary.text-middle
+								.unit-body
+									p June 29, 2021 at 2:46pm
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-map-marker.text-primary.text-middle
+								.unit-body
+									p
+										a(href="#").text-gray-dark San Diego
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-clock.text-primary.text-middle
+								.unit-body
+									p
+										| Full Time
+					.box-skin-1.offset-top-30
+						h5.font-weight-bold
+							a(href="#").text-darkest CT Technologist
+						.offset-top-20
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-calendar-clock.text-primary.text-middle
+								.unit-body
+									p June 29, 2021 at 2:46pm
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-map-marker.text-primary.text-middle
+								.unit-body
+									p
+										a(href="#").text-gray-dark San Diego
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-clock.text-primary.text-middle
+								.unit-body
+									p
+										| Full Time
+
+				.col-md-6.col-lg-3.offset-top-30.offset-sm-top-0
+					.box-skin-1
+						h5.font-weight-bold
+							a(href="#").text-darkest EKG Technician
+						.offset-top-20
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-calendar-clock.text-primary.text-middle
+								.unit-body
+									p June 29, 2021 at 2:46pm
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-map-marker.text-primary.text-middle
+								.unit-body
+									p
+										a(href="#").text-gray-dark San Diego
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-clock.text-primary.text-middle
+								.unit-body
+									p
+										| Full Time
+					.box-skin-1.offset-top-30
+						h5.font-weight-bold
+							a(href="#").text-darkest Ultrasound Technologist (Junior Employee)
+						.offset-top-20
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-calendar-clock.text-primary.text-middle
+								.unit-body
+									p June 29, 2021 at 2:46pm
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-map-marker.text-primary.text-middle
+								.unit-body
+									p
+										a(href="#").text-gray-dark San Diego
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-clock.text-primary.text-middle
+								.unit-body
+									p
+										| Full Time
+
+				.col-md-6.col-lg-3.offset-top-30.offset-md-top-0
+					.box-skin-1
+						h5.font-weight-bold
+							a(href="#").text-darkest MRI Technologist (Magnetic Resonance Imaging - Junior Employee)
+						.offset-top-20
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-calendar-clock.text-primary.text-middle
+								.unit-body
+									p June 29, 2021 at 2:46pm
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-map-marker.text-primary.text-middle
+								.unit-body
+									p
+										a(href="#").text-gray-dark San Diego
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-clock.text-primary.text-middle
+								.unit-body
+									p
+										| Full Time
+					.box-skin-1.offset-top-30
+						h5.font-weight-bold
+							a(href="#").text-darkest Radiologic Technologist
+						.offset-top-20
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-calendar-clock.text-primary.text-middle
+								.unit-body
+									p June 29, 2021 at 2:46pm
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-map-marker.text-primary.text-middle
+								.unit-body
+									p
+										a(href="#").text-gray-dark San Diego
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-clock.text-primary.text-middle
+								.unit-body
+									p
+										| Full Time
+
+				.col-md-6.col-lg-3.offset-top-30.offset-sm-top-0
+					.box-skin-1
+						h5.font-weight-bold
+							a(href="#").text-darkest Nuclear Medicine Technologist
+						.offset-top-20
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-calendar-clock.text-primary.text-middle
+								.unit-body
+									p June 29, 2021 at 2:46pm
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-map-marker.text-primary.text-middle
+								.unit-body
+									p
+										a(href="#").text-gray-dark San Diego
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-clock.text-primary.text-middle
+								.unit-body
+									p
+										| Full Time
+					.box-skin-1.offset-top-30
+						h5.font-weight-bold
+							a(href="#").text-darkest Pathologist Assistant
+						.offset-top-20
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-calendar-clock.text-primary.text-middle
+								.unit-body
+									p June 29, 2021 at 2:46pm
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-map-marker.text-primary.text-middle
+								.unit-body
+									p
+										a(href="#").text-gray-dark San Diego
+							.unit.flex-row.align-items-center.unit-spacing-xxs
+								.unit-left
+									.icon.icon-xxxs.mdi.mdi-clock.text-primary.text-middle
+								.unit-body
+									p
+										| Full Time
+
+	// Page Footer
+	include ../sections/_section-footer-default

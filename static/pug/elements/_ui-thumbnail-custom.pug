@@ -1,0 +1,15 @@
+//- thumbnail - {thumbnail} object
+mixin thumbnail-custom(thumbnail)
+	-var targetBlank = (thumbnail.targetBlank === true)? "_blank" : "_self"
+	-var photoswipe = (typeof(thumbnail.target.href) !== 'undefined') ? {"href": thumbnail.target.href, target: targetBlank} : {"data-lightgallery": "item", "href": thumbnail.target.src}
+	-var titleAttrs = thumbnail.titleAttrs || "text-uppercase text-light"
+	a.thumbnail-custom&attributes(photoswipe)
+		figure
+			img(width=thumbnail.thumb.width, height=thumbnail.thumb.height, src=thumbnail.thumb.src, alt=thumbnail.thumb.alt)
+			- if (thumbnail.title || thumbnail.description)
+				figcaption.thumbnail-custom-caption.text-center
+					- if (thumbnail.title)
+						h6.thumbnail-custom-title.text-white !{thumbnail.title}
+						hr.divider.divider-xs.bg-default
+					- if (thumbnail.description)
+						p.thumbnail-classic-desc.font-weight-bold.text-uppercase.d-none.d-sm-block !{thumbnail.description}

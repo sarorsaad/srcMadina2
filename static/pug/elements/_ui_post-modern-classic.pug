@@ -1,0 +1,59 @@
+//- Post Modern
+//- postTitle, postMeta, postList, media - objects of Post Modern
+//- additionalClass - additional class for styling
+
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-carousel-gallery-classic
+include ../elements/_ui-video-embed
+include ../elements/_ui-rd-video-player
+include ../elements/_ui-soundcloud-player-classic
+
+mixin post-modern-classic(postTitle, postMeta, postList, media, additionalClass)
+	// Post Modern
+	article.post.post-modern.post-modern-classic(class= additionalClass)
+		// Post media
+		if media
+			.post-media
+				case media.type
+					when "gallery"
+						+carousel-gallery-classic(media.images)
+					when "soundcloud"
+						.post-inset
+							+soundcloud-player-classic(media)
+					when "video"
+						+video-embed(media)
+					when "rd-video-player"
+						+rd-video-player(media)
+					when "thumbnail"
+						a.link-image(href="single-post.html")
+							img.img-responsive.img-cover(width=media.thumb.width, height=media.thumb.height, src=media.thumb.src, alt=media.thumb.alt)
+					default
+						= ""
+
+		// Post content
+		.post-content.text-left
+			// Post Title
+			.post-title.offset-top-8
+				h5.font-weight-bold
+					a(href= postTitle.titleHref)= postTitle.title
+
+			ul.list-inline.list-inline-dashed
+				each i, index in postList
+					if(i.author)
+						li
+							span.text-dark='by '
+							a.text-primary.d-inline(href= i.listHref class= i.listClass)= i.listTitle
+					else
+						if postList[parseInt(index) - 1]
+							li
+								a.text-primary(href= i.listHref class= i.listClass)= i.listTitle
+						else
+							li(class= i.listClass)= i.listTitle
+
+			// Post Body
+			.post-body
+				block
+			.tags.group.group-sm
+				each i, index in postMeta
+					if postMeta[parseInt(index)]
+						a.btn-tag.btn.btn-default(href=i.metaHref)= i.metaTitle

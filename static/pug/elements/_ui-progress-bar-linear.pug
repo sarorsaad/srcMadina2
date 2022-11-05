@@ -1,0 +1,9 @@
+//- progress - object{progress}
+mixin progress-bar-linear(data)
+	// Linear progress bar
+	.progress-linear( data-daration= data.duration )&attributes( attributes )
+		.progress-header
+			h6.text-gray-dark.pull-left= data.title
+			h6.text-primary.offset-top-0.pull-right.progress-value.progress-linear-counter= data.value
+		.progress-bar-linear-wrap.progress-linear-body
+			.progress-linear-bar.progress-bar-linear(class= data.apClass)

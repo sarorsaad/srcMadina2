@@ -1,0 +1,168 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-isotope
+
+//- Title
+block variables
+	- pageName = 'Services'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	section.section-lg.section.bg-default
+		.container
+			.row.isotope-wrap
+				.col-lg-3
+					.isotope-filters.isotope-filters-vertical
+						h4.text-uppercase.isotope-filters-title.offset-top-34
+						ul.list-inline.list-inline-sm
+							li.d-xl-none
+								p Choose your category:
+							li.section-relative
+								button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-disable-on-blur='true', data-custom-toggle-hide-on-blur='true')
+									| Filter
+									span.caret
+								ul.list-sm-inline.isotope-filters-list#isotope-1
+									li
+										a.isotope-filter.active(data-isotope-filter='Diagnostic Imaging', href='#') Diagnostic Imaging
+									li
+										a.isotope-filter(data-isotope-filter='Ultrasound diagnostics', href='#') Ultrasound diagnostics
+									li
+										a.isotope-filter(data-isotope-filter='X-ray diagnostics', href='#') X-ray diagnostics
+									li
+										a.isotope-filter(data-isotope-filter='Pediatrics', href='#') Pediatrics
+									li
+										a.isotope-filter(data-isotope-filter='Laboratory Services', href='#') Laboratory Services
+									li
+										a.isotope-filter(data-isotope-filter='Pregnancy Services', href='#') Pregnancy Services
+				.col-lg-9.offset-lg-top-0.offset-top-34
+					.row.text-md-left.isotope.isotope-style-1(data-isotope-layout='fitRows', data-column-class='.col-1', data-lightgallery='group', data-lg-animation='lg-slide-circular', data-isotope-group="gallery")
+						.col-1.isotope-item.isotope-sizer
+						.col-lg-12.isotope-item(data-filter='Diagnostic Imaging')
+							h3 Diagnostic Imaging
+							.offset-top-60
+								img.img-responsive(src='images/services-06-870x440.jpg', width='870', height='440', alt='')
+								.offset-top-30
+									p
+										| Phasellus rhoncus felis ut justo laoreet, ac suscipit purus sagittis. Nulla volutpat, leo nec tempor tincidunt, metus sem sodales massa, nec ultricies dui justo a elit. Sed libero risus, vestibulum in purus ac, viverra sollicitudin massa. Sed tristique est quis urna sodales congue. In sit amet pretium erat, et suscipit mauris. Morbi nec tempor risus. Nullam tempus elementum lacus, id tincidunt dolor blandit non. Praesent bibendum ac diam varius consequat.
+									ul.list-marked.list
+										li Mauris sem
+										li Viverra nisl
+										li Condimentum urna
+										li Phasellus id
+										li Viverra erat
+								.offset-top-30
+									a.btn.btn-ellipse.btn-primary(href='make-an-appointment.html') Make an appointment
+						.col-lg-12.isotope-item(data-filter='Ultrasound diagnostics')
+							h3 Ultrasound Diagnostics
+							.offset-top-60
+								img.img-responsive(src='images/services-05-870x440.jpg', width='870', height='440', alt='')
+								.offset-top-30
+									p
+										| Vivamus sed laoreet neque. Suspendisse vel eros nibh. Suspendisse potenti. Sed non viverra orci, eu volutpat diam.
+									p
+										| Fusce consequat pretium augue, scelerisque maximus eros commodo vel. Mauris vitae nisl quis odio semper rutrum vel quis est. Curabitur ac luctus metus.
+									p
+										| Cras fermentum justo massa, at rhoncus risus vulputate ut. Quisque molestie varius lacus.
+									p
+										| Donec mattis nisi nisi, a aliquam mi pulvinar sit amet. Mauris at scelerisque lectus. Sed tincidunt malesuada vestibulum. Proin ante diam, ultrices eu.
+								.offset-top-30
+									a.btn.btn-ellipse.btn-primary(href='make-an-appointment.html') Make an appointment
+						.col-lg-12.isotope-item(data-filter='X-ray diagnostics')
+							h3 X-ray diagnostics
+							.offset-top-60
+								img.img-responsive(src='images/services-04-870x440.jpg', width='870', height='440', alt='')
+								.offset-top-30
+									p
+										| Aenean ac ex nunc. Phasellus tincidunt tempus enim. Pellentesque habitant morbi tristique senectus et.
+									p
+										| Sed elementum volutpat libero at pellentesque. Vestibulum interdum, dolor eget tristique dignissim.
+						.col-lg-12.isotope-item(data-filter='Pediatrics')
+							h3 Pediatrics
+							.offset-top-60
+								img.img-responsive(src='images/services-03-870x440.jpg', width='870', height='440', alt='')
+								.offset-top-30
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit:
+									ul.list-marked.list
+										li Etiam rhoncus
+										li Pellentesque ve
+										li Praesent leo es
+										li Tincidunt, metus sem
+										li Donec maximus
+										li Velit vel dui
+										li Nulla venenatis
+										li Libero ligula,
+										li Convallis pretium
+								.offset-top-30
+									a.btn.btn-ellipse.btn-primary(href='make-an-appointment.html') Make an appointment
+						.col-lg-12.isotope-item(data-filter='Laboratory Services')
+							h3 Laboratory Services
+							.offset-top-60
+								img.img-responsive(src='images/services-02-870x440.jpg', width='870', height='440', alt='')
+								.offset-top-30
+									p
+										| Aenean ac ex nunc. Phasellus tincidunt tempus enim. Sed elementum volutpat libero at pellentesque. Vestibulum interdum, dolor eget tristique dignissim, augue diam viverra ex, non malesuada ipsum mauris volutpat nibh.
+									p
+										| Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam efficitur accumsan condimentum. Suspendisse non leo ut nulla maximus blandit at ac ante. Donec volutpat sit amet elit non ultricies.
+									p
+										| Nulla a imperdiet odio. Duis interdum eget dui id elementum. Duis quis ornare nunc. Integer at volutpat augue. Donec ornare molestie elit eget imperdiet. Mauris vel felis ac neque egestas condimentum at consectetur turpis.
+								.offset-top-30
+									a.btn.btn-ellipse.btn-primary(href='make-an-appointment.html') Make an appointment
+						.col-lg-12.isotope-item(data-filter='Pregnancy Services')
+							h3 Pregnancy Services
+							.offset-top-60
+								img.img-responsive(src='images/services-01-870x440.jpg', width='870', height='440', alt='')
+								.offset-top-30
+									p
+										| Etiam efficitur accumsan condimentum. Suspendisse non leo ut nulla maximus blandit at ac ante. Donec volutpat sit amet elit non ultricies. Nulla a imperdiet odio.
+									p
+										| Donec ornare molestie elit eget imperdiet. Vivamus sed laoreet neque.
+										a(href='make-an-appointment.html') tincidunt sit amet tellus
+										|  mauris vitae nisl quis odio semper rutrum vel quis est. Curabitur ac.
+							.offset-top-66
+								h3 Team of Doctors
+							.offset-top-60
+								.row.text-sm-left
+									.col-lg-5.inset-lg-right-30
+										.unit.flex-xxl-row.flex-xl-row.flex-lg-row.flex-md-row.flex-sm-row.unit-spacing-sm
+											.unit-left
+												img.img-responsive(src='images/user-scott-riley-110x110.jpg', width='110', height='110', alt='')
+											.unit-body
+												h5.font-weight-bold.text-primary Dr. Scott Riley
+												p.font-italic.offset-top-0 CMO, Pathologist
+												.d-inline-block
+													.p.unit.unit-spacing-xxs.flex-row
+														.unit-left
+															span.icon.icon-xs.mdi.mdi-phone.text-primary
+														.unit-body
+															a.h6(href='tel:#') 1-800-1234-567
+										p
+											| Cras fermentum justo massa, at rhoncus risus vulputate ut. Quisque molestie varius lacus, eu feugiat diam ultrices at.
+										a.btn.btn-primary.btn-ellipse(href='team-member.html') Learn more
+									.col-lg-5.offset-top-41.offset-md-top-0.inset-lg-right-30
+										.unit.flex-xxl-row.flex-xl-row.flex-lg-row.flex-md-row.flex-sm-row.unit-spacing-sm
+											.unit-left
+												img.img-responsive(src='images/user-johnny-fowler-110x110.jpg', width='110', height='110', alt='')
+											.unit-body
+												h5.font-weight-bold.text-primary Dr. Eric Snyder
+												p.font-italic.offset-top-0 MRI Technologist
+												.d-inline-block
+													.p.unit.unit-spacing-xxs.flex-row
+														.unit-left
+															span.icon.icon-xs.mdi.mdi-phone.text-primary
+														.unit-body
+															a.h6(href='tel:#') 1-800-1234-567
+										p
+											| Donec mattis nisi nisi, a aliquam mi pulvinar sit amet. Mauris at scelerisque lectus. Sed tincidunt malesuada vestibulum.
+										a.btn.btn-primary.btn-ellipse(href='team-member.html') Learn more
+
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

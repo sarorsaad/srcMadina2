@@ -1,0 +1,59 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+
+
+//- Title
+block variables
+	- pageName = 'Buttons'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// Buttons
+	section.section-98.section-sm-110
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start.text-lg-left
+				.col-md-8.col-lg-8
+					h6.text-lg-left BUTTON SIZES
+					hr.text-subline
+					.group-lg.offset-top-20.offset-md-top-30
+						button.btn.btn-lg.btn-ellipse.btn-primary large button
+						button.btn.btn-ellipse.btn-primary default button
+						button.btn.btn-xs.btn-ellipse.btn-primary small button
+
+					.offset-top-66.offset-md-top-110
+						h6.text-lg-left BUTTON SHAPES
+						hr.text-subline
+						.group-lg.offset-top-20.offset-md-top-30
+							button.btn.btn-ellipse.btn-primary default
+							button.btn.btn-primary round
+							button.btn.btn-rect.btn-primary square
+
+					.offset-top-66.offset-md-top-110
+						h6.text-lg-left Button with Icons
+						hr.text-subline
+						.group-lg.offset-top-20.offset-md-top-30
+							button.btn.btn-ellipse.btn-icon.btn-icon-right.btn-primary
+								span.icon.mdi.mdi-arrow-right-bold
+								| icon right
+							button.btn.btn-ellipse.btn-icon.btn-icon-left.btn-primary
+								span.icon.mdi.mdi-arrow-left-bold
+								| icon left
+
+					.offset-top-66.offset-md-top-110
+						h6.text-lg-left Button with Shadow
+						hr.text-subline
+						.group-lg.offset-top-20.offset-md-top-30
+							button.btn.btn-ellipse.btn-with-shadow.btn-primary
+								| default button
+
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

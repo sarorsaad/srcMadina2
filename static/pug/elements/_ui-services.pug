@@ -1,0 +1,5 @@
+//- Services
+mixin service(imgPath, title, href)
+  .service
+    +img-set-dimensions(imgPath, 'img-responsive')
+    a(href=href).service-desc.h6= title

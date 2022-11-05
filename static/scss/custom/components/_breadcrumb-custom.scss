@@ -1,0 +1,135 @@
+/** @section Breadcrumbs */
+
+// Local variables
+$breadcrumb-padding-vertical: 8px;
+$breadcrumb-padding-horizontal: 15px;
+$breadcrumb-bg: $gray-300;
+$breadcrumb-color: $primary;
+$breadcrumb-active-color: $white;
+$breadcrumb-separator: "\f105";
+
+// Base styles
+.breadcrumbs-custom {
+	position: relative;
+	padding: 35px 0 40px;
+	background-color: $breadcrumb-bg;
+	background-position: center;
+}
+
+.breadcrumbs-custom-path {
+	@include spacingX(15px);
+	
+	a {
+		display: inline;
+		vertical-align: middle;
+		
+		&,
+		&:active,
+		&:focus {
+			color: $breadcrumb-color;
+		}
+	}
+	
+	li {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		vertical-align: middle;
+		font-size: 14px;
+		line-height: 1;
+		
+		&::after {
+			content: '\f14f';
+			font-family: 'Material Design Icons';
+			font-size: 14px;
+			line-height: 14px;
+			padding-left: 15px;
+			opacity: .4;
+			position: relative;
+			top: 2px;
+		}
+	}
+	
+	li:last-child {
+		&:after {
+			display: none;
+		}
+	}
+	
+	a:hover{
+		color: $white;
+	}
+	li{
+		&.active{
+			color: rgba($white,.5);
+		}
+		a{
+			color: $white;
+			&:hover{
+				text-decoration: underline;
+			}
+			
+		}
+	}
+	
+	
+}
+
+* + .breadcrumbs-custom-path {
+	margin-top: 14px;
+}
+
+@include media-breakpoint-down(md) {
+	.breadcrumbs-custom-title {
+		font-size: 26px;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.breadcrumbs-custom {
+		@include spacingX(60px);
+	}
+	* + .breadcrumbs-custom-path {
+		margin-top: 18px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	* + .breadcrumbs-custom-path {
+		margin-top: 40px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	* + .breadcrumbs-custom-path {
+		margin-top: 70px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.breadcrumbs-custom {
+		padding: 70px 0 80px;
+	}
+	
+	.breadcrumbs-custom-path {
+		li {
+			font-size: 16px;
+		}
+	}
+}
+
+
+@include media-breakpoint-up(xl) {
+	.breadcrumbs-custom {
+		padding: 110px 0 41px;
+	}
+}
+
+
+.breadcrumbs-creative{
+	> .container{
+		@include media-breakpoint-up(lg) {
+			padding-left: 414px;
+		}
+	}
+}

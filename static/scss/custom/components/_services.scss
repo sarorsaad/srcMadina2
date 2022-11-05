@@ -1,0 +1,80 @@
+//
+// Services
+// --------------------------------------------------
+
+.service {
+  position: relative;
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  img {
+    @include media-breakpoint-up(lg) {
+      border-radius: 5px;
+    }
+
+  }
+
+  .service-desc {
+    display: block;
+    background: $primary;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 15px 15px 14px 17px;
+    color: $white;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+    position: relative;
+    text-align: left;
+    
+    &:before {
+      content: '\f150';
+      font-family: $icon-font-material-design;
+      font-size: 24px;
+      color: rgba($white, .5);
+      opacity: 0;
+      transition: opacity .2s ease-in-out, transform .28s ease-in-out;
+      @include transform ( translateX(-10px) scale(0) );
+      position: absolute;
+      top: 10px;
+      left: 14px;
+    }
+
+    &:hover {
+      background: $gray-darkest;
+      padding-left: 48px;
+
+      &:before {
+        opacity: 1;
+        @include transform ( translateX(0) scale(1) );
+      }
+  
+    
+      
+      
+    }
+  
+    &.h6 {
+      font-size: 16px;
+    }
+  
+  }
+
+  @include media-breakpoint-up(lg) {
+    .service-desc {
+      border-radius: 5px;
+      position: absolute;
+      width: 270px;
+      bottom: 18px;
+      right: -12px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .service-desc {
+      right: -34px;
+    }
+  }
+}

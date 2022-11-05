@@ -1,0 +1,97 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include  ../elements/_ui-tabs-classic
+include ../elements/_widget-list-social
+
+//- Title
+block variables
+	- pageName = 'Login'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// Our Customers
+	section.section-lg.section.bg-default
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start
+				.col-md-8.col-lg-6.col-xl-5
+					+tabs-classic(['Login', 'Registration'])
+						div
+							.responsive-tabs-padding-none
+								// RD Mailform
+								form.text-left(action='#')
+									.form-wrap
+										label.form-label.form-label-outside(for="contact-email") Username or e-mail
+										input#contact-email.form-input(type="email" name="email" )
+									.form-wrap
+										label.form-label.form-label-outside(for="password") Password
+										input#password.form-input(name="password" type="password" )
+									.offset-top-20
+										.d-md-flex.offset-none.align-items-sm-center.text-center.text-md-left
+											button(type="submit").btn.btn-ellipse.btn-primary sign in
+											div.inset-left-20.inset-right-20.offset-top-10.offset-sm-top-0
+												p or enter with
+											.offset-top-10.offset-sm-top-0
+												+widget-list-social([
+													{
+														"icon": "fa fa-facebook",
+														"href": "#"
+													},
+													{
+														"icon": "fa fa-twitter",
+														"href": "#"
+													},
+													{
+														"icon": "fa fa-google-plus",
+														"href": "#"
+													}
+												],
+													'icon-xxs icon-circle icon-gray-light')
+
+						div
+							.responsive-tabs-padding-none
+								// RD Mailform
+								form.text-left(action='#')
+									.form-wrap
+										label.form-label.form-label-outside(for="name") Name
+										input#name.form-input(type="text" name="name" )
+									.form-wrap
+										label.form-label.form-label-outside(for="contact-email1") E-mail
+										input#contact-email1.form-input(type="email" name="email" )
+									.form-wrap
+										label.form-label.form-label-outside(for="password1") Password
+										input#password1.form-input(name="password" type="password" )
+									.form-wrap
+										label.form-label.form-label-outside(for="password2") Confirm Password
+										input#password2.form-input(name="password" type="password" )
+									.offset-top-20
+										.d-md-flex.offset-none.align-items-md-center.text-center.text-md-left
+											button(type="submit").btn.btn-ellipse.btn-primary Register
+											div.inset-left-20.inset-right-20.offset-top-14.offset-sm-top-0
+												p or enter with
+											.offset-top-14.offset-sm-top-0
+												+widget-list-social([
+													{
+														"icon": "fa fa-facebook",
+														"href": "#"
+													},
+													{
+														"icon": "fa fa-twitter",
+														"href": "#"
+													},
+													{
+														"icon": "fa fa-google-plus",
+														"href": "#"
+													}
+												],
+													'icon-xxs icon-circle icon-gray-light')
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

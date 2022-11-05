@@ -1,0 +1,141 @@
+//
+// Custom scaffolding
+// --------------------------------------------------
+
+// Page styles
+// --------------------------------------------------
+
+.page {
+  overflow: hidden;
+  background-color: $main-bg;
+}
+
+// Image-responsive
+.img-responsive {
+  display: block;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+// Element with border radius
+.img-rounded {
+  border-radius: $border-radius;
+}
+
+.img-circle {
+  border-radius: 50%; // set radius in percents
+}
+
+.img-cover {
+  width: 100%;
+  height: auto;
+}
+
+.img-bordered-white {
+  border: 2px solid $white;
+}
+
+// Element with 50% opacity
+.img-semi-transparent {
+  opacity: .5;
+  @include transition(.35s all ease);
+  will-change: transform;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.element-fullwidth {
+  width: 100%;
+}
+
+.bg-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-mobile-half-width {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  @include media-breakpoint-up(sm) {
+    max-width: none;
+  }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  border-radius: 0;
+}
+
+//To front
+.to-front {
+  position: relative;
+  z-index: 10;
+}
+
+// .box-skin-1
+.box-skin-1 {
+  background: $white;
+  border-radius: 5px;
+  padding: 34px 30px;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    box-shadow: 0 2px 13px 0px rgba(0, 0, 0, .16);
+  }
+
+  h5 a:hover {
+    color: #3b61b9!important;
+  }
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.max-width-none {
+  max-width: none;
+}
+
+@media (min-width: 992px) {
+  .bg-image-md-fullwidth-1 {
+    position: relative;
+    z-index: 1;
+  }
+  .bg-image-md-fullwidth-1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 44vw;
+    height: 100%;
+    background: transparent url(../images/background-02-676x545.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    z-index: -1;
+  }
+  .bg-image-md-fullwidth-1-left:before {
+    right: 12px;
+  }
+
+}
+
+@include media-breakpoint-up(xxl) {
+  .bg-image-md-fullwidth-1:before {
+    width: 36vw;
+  }
+  .bg-image-md-fullwidth-1-left:before {
+    right: -10px;
+  }
+  
+
+}
+
+@media (min-width: 2000px) {
+  .bg-image-md-fullwidth-1:before {
+    width: 47vw;
+  }
+}
+

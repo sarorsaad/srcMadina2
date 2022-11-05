@@ -1,0 +1,58 @@
+//- Post Modern Timeline
+//- aClass - additional class
+//- postTitle, postMeta, postList, media - objects of Post Modern Timeline
+
+include ../elements/_ui-thumbnail-classic
+include ../elements/_ui-carousel-gallery-classic
+include ../elements/_ui-video-embed
+include ../elements/_ui-soundcloud-player-classic
+include ../elements/_ui-rd-video-player
+
+mixin post-modern-timeline(aClass, postTitle, postMeta, postList, author, media)
+  // Post Modern Timeline
+  article.post.post-modern.post-modern-timeline(class=aClass)
+    // Post media
+    if media
+      .post-media
+        case media.type
+          when "gallery"
+            +carousel-gallery-classic(media.images)
+          when "soundcloud"
+            .post-inset
+              +soundcloud-player-classic(media)
+          when "video"
+            +video-embed(media)
+          when "rd-video-player"
+            +rd-video-player(media)
+          when "thumbnail"
+            a.link-image(href="single-post.html")
+              img.img-responsive(width=media.thumb.width, height=media.thumb.height, src=media.thumb.src, alt=media.thumb.alt)
+          default
+            = ""
+
+    // Post content
+    section.post-content.text-left
+      // Post Title
+      .post-title.offset-top-8
+        h5.font-weight-bold
+          a(href= postTitle.titleHref)= postTitle.title
+
+      .offset-top-4
+        .divider.divider-vertical.hr-sm-left-0.d-inline-block
+        each i, index in postList
+          a.text-primary.d-inline-block(href= i.listHref class= i.listClass)= i.listTitle
+
+      // Post Body
+      .post-body.offset-top-14
+        block
+
+      .post-author
+        .post-author-img
+          img.rounded-circle(width=author.width, height=author.height, src=author.src, alt=author.alt)
+        .post-author-name.text-middle
+          = author.title
+
+      .post-modern-classic-meta.tags.group.group-sm.offset-top-20
+        each i, index in postMeta
+          if postMeta[parseInt(index)]
+            a.btn-tag.btn.btn-default(href=i.metaHref)= i.metaTitle

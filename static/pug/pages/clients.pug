@@ -1,0 +1,176 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-partners-carousel
+include ../elements/_ui-testimonials-type-1
+include ../elements/_ui-testimonials-type-1-top
+
+//- Title
+block variables
+	- pageName = 'Clients'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// Our Customers
+	section.section-lg.section.bg-default
+		.container
+			h3.text-center Our Customers
+			.offset-top-66
+				.owl-carousel-middle
+					+partners-carousel([
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-01-150x79.png", "width": 150, "height": 79, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-02-150x135.png", "width": 150, "height": 135, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-03-150x111.png", "width": 150, "height": 111, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-04-150x149.png", "width": 150, "height": 149, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-05-150x117.png", "width": 150, "height": 117, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-01-150x79.png", "width": 150, "height": 79, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-03-150x111.png", "width": 150, "height": 111, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-04-150x149.png", "width": 150, "height": 149, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-03-150x111.png", "width": 150, "height": 111, "alt": ""}
+						},
+						{
+							"link": {"href": '#'},
+							"image": {"src": "images/clients/partner-04-150x149.png", "width": 150, "height": 149, "alt": ""}
+						}
+					])
+
+	// testimonials
+	section.section-lg.bg-default-liac.section
+		.container
+			h3.text-center Testimonials
+			.offset-top-66
+				.owl-carousel.owl-carousel-default.owl-carousel-class-light(data-loop="false" data-items="1"  data-dots="true" data-mouse-drag="false" data-lg-items="2" data-nav="false"
+					data-owl= {
+						dots: true,
+						nav: false,
+						autoplayTimeout: 3500
+					}
+				)
+					.item
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-betty-wade-60x60.jpg",
+								"alt": ""
+							},
+							"Betty Wade",
+							"Patient",
+							"I had a colonoscopy at Medina Diagnostic Center. From the moment I entered the center, I was greeted and treated warmly and respectfully and it was the best experience."
+						)
+					.item
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-bryan-green-60x60.jpg",
+								"alt": ""
+							},
+							"Bryan Green",
+							"Patient",
+							"I would like to thank and compliment the staff at Medina, including the outpatient, laboratory staff and cardiac division during my stay at your facility on July 9th and 10th."
+						)
+					.item
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-bryan-green-60x60.jpg",
+								"alt": ""
+							},
+							"Bryan Green",
+							"Patient",
+							"I had a colonoscopy at Medina Diagnostic Center. From the moment I entered the center, I was greeted and treated warmly and respectfully and it was the best experience."
+						)
+					.item
+						+testimonials-type-1(
+							{
+								"width": 60,
+								"height": 60,
+								"src": "images/users/user-betty-wade-60x60.jpg",
+								"alt": ""
+							},
+							"Betty Wade",
+							"Patient",
+							"I would like to thank and compliment the staff at Medina, including the outpatient, laboratory staff and cardiac division during my stay at your facility on July 9th and 10th."
+						)
+
+
+
+	// 3 columns testimonials
+	section.section-lg.section.bg-default
+		.container
+			h3.text-center 3 column testimonials
+			.row.row-30
+				.col-lg-4
+					+testimonials-type-1-top(
+						{
+							"width": 60,
+							"height": 60,
+							"src": "images/users/user-betty-wade-60x60.jpg",
+							"alt": ""
+						},
+						"Betty Wade",
+						"Patient",
+						"I had a colonoscopy at Medina Diagnostic Center. From the moment I entered the center, I was greeted and treated warmly and respectfully and it was the best experience."
+					)
+				.col-lg-4
+					+testimonials-type-1-top(
+						{
+							"width": 60,
+							"height": 60,
+							"src": "images/users/user-bryan-green-60x60.jpg",
+							"alt": ""
+						},
+						"Bryan Green",
+						"Patient",
+						"I would like to thank and compliment the staff at Medina, including the outpatient, laboratory staff and cardiac division during my stay at your facility on July 9th and 10th."
+					)
+				.col-lg-4
+					+testimonials-type-1-top(
+						{
+							"width": 60,
+							"height": 60,
+							"src": "images/users/user-brittany-douglas-60x60.jpg",
+							"alt": ""
+						},
+						"Brittany Douglas",
+						"Patient",
+						"Nunc dignissim tortor augue, et semper quam aliquet et. Donec ornare molestie elit eget imperdiet. Mauris vel felis ac neque egestas condimentum at consectetur turpis."
+					)
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

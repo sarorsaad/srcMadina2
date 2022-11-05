@@ -1,0 +1,26 @@
+/** @section Page layout */
+
+// Page
+.page {
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	opacity: 0;
+
+	&.fadeIn { animation-timing-function: ease-out; }
+	&.fadeOut { animation-timing-function: ease-in; }
+
+	[data-x-mode] & {
+		opacity: 1;
+	}
+}
+
+
+.header-absolute{
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		right: 0;
+		left: 0;
+		z-index: 500;
+	}
+}

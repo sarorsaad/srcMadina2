@@ -1,0 +1,21 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-tabs-classic
+include ../elements/_widget-rd-calendar
+
+//- Title
+block variables
+	- pageName = 'Make an Appointment'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+	include ../sections/_section-make-an-appointment-calendar
+
+	// Page Footer
+	include ../sections/_section-footer-default

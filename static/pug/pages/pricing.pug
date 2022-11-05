@@ -1,0 +1,108 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-tables
+include  ../elements/_ui-box-planning-type-2
+
+//- Title
+block variables
+	- pageName = 'Pricing'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+	// Patient Pricing Information
+	section.section-lg.bg-default
+		.container.text-md-left
+			.row.justify-content-sm-center.justify-content-lg-start
+				.col-md-10.col-lg-8
+					h3 Patient Pricing Information
+					.offset-top-34.offset-sm-top-60
+						p Aenean ac ex nunc. Phasellus tincidunt tempus enim. Sed elementum volutpat libero at pellentesque. Vestibulum interdum, dolor eget tristique dignissim, augue diam viverra ex, non malesuada ipsum mauris volutpat nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam efficitur accumsan condimentum. Suspendisse non leo ut nulla maximus blandit at ac ante. Donec volutpat sit amet elit non ultricies. Nulla a imperdiet odio. Duis interdum eget dui id elementum. Duis quis ornare nunc. Integer at volutpat augue.
+					.offset-top-60
+						h6 Regular Diagnostic and Health Care Services — Per Day Charges
+						.offset-top-10
+							hr.text-subline
+						.offset-top-10
+							+table-custom([
+								['#', 'Service', 'Price, $'],
+								['1', 'X-ray', '6,160.00'],
+								['2', 'Magnetic Resonance Imaging', '2,575.00'],
+								['3', 'Computer Tomography', '2,120.00'],
+								['4', 'Laboratory Tests', '4,765.00'],
+								['5', 'Ultrasound Imaging', '4,785.00'],
+								['6', 'Pregnancy Care  Services', '5,030.00'],
+							],
+								"table-fixed table-hover-rows table-3-col", true)
+						.offset-top-66
+							h6 Emergency Department Charges
+							.offset-top-10
+								hr.text-subline
+							.offset-top-10
+								+table-custom([
+									['#', 'Service', 'Price, $'],
+									['1', 'Level 1', '290.00'],
+									['2', 'Level 2', '476.00'],
+									['3', 'Level 3', '912.00'],
+									['4', 'Level 4', '1,246.00'],
+									['5', 'Level 5', '2,306.00'],
+									['6', 'Critical tests', '3,439.00'],
+									['7', 'CT & Ultrasound Diagnostics', '8,050.00'],
+									['8', 'MRI & X-ray ', '5,750.00'],
+								],
+									"table-fixed table-hover-rows table-3-col", true)
+
+	// Become a Partner
+	section.section-lg.bg-default-liac
+		.container
+			h3.text-center Diagnostic Services Pricing
+			.row.no-gutters.justify-content-lg-center.offset-top-66
+				.col-sm-8.offset-sm-2.col-lg-3.offset-lg-0.col-xl-3.offset-md-right-negative-6
+					+box-planning-2("fa-star-o", "Starter", "19", "month", null , "bg-deluge", null, "buy now", "btn-deluge")
+						ul.list-separated.list-unstyled
+							li
+								span.text-gray-darker CT Scan
+							li
+								span.text-gray-darker Radiography
+							li
+								span.text-strike.text-gray Ultrasound
+							li
+								span.text-strike.text-gray Mammography
+							li
+								span.text-strike.text-gray Nuclear Medicine
+
+				.col-sm-8.offset-sm-2.col-lg-4.offset-lg-0.offset-top-50.offset-md-top-0.to-front
+					+box-planning-2("fa-star-half-empty", "Business", "59", "month", "text-deluge", "bg-deluge", "bg-deluge", "buy now", "btn-deluge", "active")
+						ul.list-separated.list-unstyled
+							li
+								span.text-gray-darker CT Scan
+							li
+								span.text-gray-darker Radiography
+							li
+								span.text-gray-darker Ultrasound
+							li
+								span.text-strike.text-gray Mammography
+							li
+								span.text-strike.text-gray Nuclear Medicine
+
+				.col-sm-8.offset-sm-2.col-lg-3.offset-lg-0.offset-top-50.offset-md-top-0.offset-md-left-negative-6
+					+box-planning-2("fa-star", "Ultimate", "99", "month", null, "bg-deluge", null, "buy now", "btn-deluge")
+						ul.list-separated.list-unstyled
+							li
+								span.text-gray-darker CT Scan
+							li
+								span.text-gray-darker Radiography
+							li
+								span.text-gray-darker Ultrasound
+							li
+								span.text-gray-darker Mammography
+							li
+								span.text-gray-darker Nuclear Medicine
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

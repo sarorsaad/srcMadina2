@@ -1,0 +1,1474 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-tabs-classic
+include ../elements/_widget-rd-calendar
+
+//- Title
+block variables
+	- pageName = 'Timetable'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// Timetable
+	section.section-98.section-sm-110
+		.container
+			+tabs-classic(['All Departments', 'MIT', 'X-Ray', 'Clinical Laboratory', 'CT Imaging', 'ECG'])
+				div
+					.calendar-responsive-mod-1.offset-top-30
+						table.calendar-variant-2
+							thead
+								tr
+									th.hours
+										span.d-none.d-lg-inline Hours
+									th
+										| Monday
+									th
+										| Tuesday
+									th
+										| Wednesday
+									th
+										| Thursday
+									th
+										| Friday
+									th
+										| Saturday
+									th
+										| Sunday
+							tbody
+								tr
+									td: span.text-gray-darker
+										| 8:00am
+										span.d-none.d-xl-inline -
+										br.d-xl-none
+										| 9:00am
+									td
+										div.fc-event(style="height:403%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-carmine
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-05-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Jane Fowler
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 Clinical Laboratory Technologist
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+									td
+
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 9:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 10:00am
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-carmine
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-05-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Jane Fowler
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 Clinical Laboratory Technologist
+
+
+									td
+
+
+								tr
+									td: span.text-gray-darker
+										| 10:00am
+										span.d-none.d-xl-inline –
+										br.d-xl-none
+										| 11:00am
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 11:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 12:00pm
+									td
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-carmine
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-05-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Jane Fowler
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 Clinical Laboratory Technologist
+
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 12:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 1:00pm
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 1:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 2:00pm
+									td
+										div.fc-event(style="height:504%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+									td
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+									td
+									td
+									td
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 2:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 3:00pm
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 3:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 4:00pm
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 4:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 5:00pm
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 5:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 6:00pm
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+				div
+					.calendar-responsive-mod-1.offset-top-30
+						table.calendar-variant-2
+							thead
+								tr
+									th.hours
+										span.d-none.d-lg-inline Hours
+									th
+										| Monday
+									th
+										| Tuesday
+									th
+										| Wednesday
+									th
+										| Thursday
+									th
+										| Friday
+									th
+										| Saturday
+									th
+										| Sunday
+							tbody
+								tr
+									td: span.text-gray-darker
+										| 8:00am
+										span.d-none.d-xl-inline -
+										br.d-xl-none
+										| 9:00am
+									td
+										div.fc-event(style="height:403%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+									td
+
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 9:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 10:00am
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td: span.text-gray-darker
+										| 10:00am
+										span.d-none.d-xl-inline –
+										br.d-xl-none
+										| 11:00am
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 11:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 12:00pm
+									td
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-carmine
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-05-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Jane Fowler
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 Clinical Laboratory Technologist
+
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 12:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 1:00pm
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 1:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 2:00pm
+									td
+										div.fc-event(style="height:504%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+									td
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+									td
+									td
+									td
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 2:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 3:00pm
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 3:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 4:00pm
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+								tr
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+								tr
+									td
+
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+
+
+
+
+				div
+					.calendar-responsive-mod-1.offset-top-30
+						table.calendar-variant-2
+							thead
+								tr
+									th.hours
+										span.d-none.d-lg-inline Hours
+									th
+										| Monday
+									th
+										| Tuesday
+									th
+										| Wednesday
+									th
+										| Thursday
+									th
+										| Friday
+									th
+										| Saturday
+									th
+										| Sunday
+							tbody
+								tr
+									td: span.text-gray-darker
+										| 8:00am
+										span.d-none.d-xl-inline -
+										br.d-xl-none
+										| 9:00am
+									td
+										div.fc-event(style="height:606%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-carmine
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+									td
+
+									td
+
+
+									td
+
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 9:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 10:00am
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td: span.text-gray-darker
+										| 10:00am
+										span.d-none.d-xl-inline –
+										br.d-xl-none
+										| 11:00am
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 11:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 12:00pm
+									td
+									td
+
+									td
+
+									td
+
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 12:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 1:00pm
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 1:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 2:00pm
+									td
+										div.fc-event(style="height:504%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+									td
+									td
+
+
+									td
+									td
+									td
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 2:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 3:00pm
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 3:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 4:00pm
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+								tr
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+								tr
+									td
+
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+
+
+
+
+				div
+					.calendar-responsive-mod-1.offset-top-30
+						table.calendar-variant-2
+							thead
+								tr
+									th.hours
+										span.d-none.d-lg-inline Hours
+									th
+										| Monday
+									th
+										| Tuesday
+									th
+										| Wednesday
+									th
+										| Thursday
+									th
+										| Friday
+									th
+										| Saturday
+									th
+										| Sunday
+							tbody
+								tr
+									td: span.text-gray-darker
+										| 8:00am
+										span.d-none.d-xl-inline -
+										br.d-xl-none
+										| 9:00am
+									td
+										div.fc-event(style="height:403%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+									td
+
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 9:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 10:00am
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td: span.text-gray-darker
+										| 10:00am
+										span.d-none.d-xl-inline –
+										br.d-xl-none
+										| 11:00am
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 11:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 12:00pm
+									td
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-carmine
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-05-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Jane Fowler
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 Clinical Laboratory Technologist
+
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 12:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 1:00pm
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 1:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 2:00pm
+									td
+										div.fc-event(style="height:504%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+									td
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+									td
+									td
+									td
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 2:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 3:00pm
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 3:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 4:00pm
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+								tr
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+								tr
+									td
+
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+
+
+
+
+				div
+					.calendar-responsive-mod-1.offset-top-30
+						table.calendar-variant-2
+							thead
+								tr
+									th.hours
+										span.d-none.d-lg-inline Hours
+									th
+										| Monday
+									th
+										| Tuesday
+									th
+										| Wednesday
+									th
+										| Thursday
+									th
+										| Friday
+									th
+										| Saturday
+									th
+										| Sunday
+							tbody
+								tr
+									td: span.text-gray-darker
+										| 8:00am
+										span.d-none.d-xl-inline -
+										br.d-xl-none
+										| 9:00am
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+									td
+
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 9:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 10:00am
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td: span.text-gray-darker
+										| 10:00am
+										span.d-none.d-xl-inline –
+										br.d-xl-none
+										| 11:00am
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:505%;")
+											.fc-event-wrap.bg-accent
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-06-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Eric Snyder
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 MRI Technologist
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 11:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 12:00pm
+									td
+									td
+
+									td
+
+									td
+
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 12:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 1:00pm
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 1:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 2:00pm
+									td
+										div.fc-event(style="height:504%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+									td
+									td
+
+
+									td
+									td
+									td
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 2:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 3:00pm
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 3:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 4:00pm
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+								tr
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+								tr
+									td
+
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+				div
+					.calendar-responsive-mod-1.offset-top-30
+						table.calendar-variant-2
+							thead
+								tr
+									th.hours
+										span.d-none.d-lg-inline Hours
+									th
+										| Monday
+									th
+										| Tuesday
+									th
+										| Wednesday
+									th
+										| Thursday
+									th
+										| Friday
+									th
+										| Saturday
+									th
+										| Sunday
+							tbody
+								tr
+									td: span.text-gray-darker
+										| 8:00am
+										span.d-none.d-xl-inline -
+										br.d-xl-none
+										| 9:00am
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+									td
+
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 9:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 10:00am
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td: span.text-gray-darker
+										| 10:00am
+										span.d-none.d-xl-inline –
+										br.d-xl-none
+										| 11:00am
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 11:00am
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 12:00pm
+									td
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-carmine
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-05-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Jane Fowler
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 Clinical Laboratory Technologist
+
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 12:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 1:00pm
+									td
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 1:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 2:00pm
+									td
+										div.fc-event(style="height:504%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+									td
+									td
+
+
+									td
+									td
+									td
+									td
+
+								tr
+									td
+										span.text-gray-darker
+											| 2:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 3:00pm
+									td
+
+									td
+
+									td
+
+									td
+
+									td
+										div.fc-event(style="height:404%;")
+											.fc-event-wrap.bg-java
+												.fc-event-inner
+													+img-set-dimensions('images/our-team-02-270x270.jpg', 'img-responsive img-circle')
+													div.text-white.font-weight-bold.offset-top-10 Dr. Martha Schmidt
+													p(style="color: rgba(255,255,255, .4)").font-italic.offset-top-4 ECG Technician
+
+									td
+
+									td
+
+
+								tr
+									td
+										span.text-gray-darker
+											| 3:00pm
+											span.d-none.d-xl-inline –
+											br.d-xl-none
+											| 4:00pm
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+								tr
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+								tr
+									td
+
+									td
+									td
+									td
+									td
+									td
+									td
+									td
+
+
+
+
+
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

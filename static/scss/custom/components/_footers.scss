@@ -1,0 +1,45 @@
+.footer-classic{
+	.brand{
+		display: inline-block;
+		img{
+			width: 152px;
+			height: auto;
+		}
+	}
+	.list-inline{
+		display: flex;
+		justify-content: center;
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-start;
+		}
+	}
+	.rd-mailform{
+		.form-input{
+			border: none;
+			min-height: 40px;
+			padding: 7px 12px;
+			color: $gray-darkest;
+			&:focus{
+				z-index: initial;
+			}
+		}
+		.form-label{
+			left: 14px;
+			top: 20px;
+			color: $gray-darkest;
+			right: auto;
+		}
+	}
+	.rights{
+		font-size: 14px;
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
+		a{
+			&:hover{
+				color: $white;
+			}
+		}
+	}
+}

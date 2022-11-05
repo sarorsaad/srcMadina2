@@ -1,0 +1,68 @@
+include ../elements/_widget-post
+include ../elements/_widget-form-subscribe-type-2
+include ../elements/_widget-list-social
+
+footer.section-relative.section-top-66.section-bottom-34.page-footer.bg-accent.context-dark.footer-classic
+	.container
+		.row.justify-content-md-center.text-xl-left
+			.col-md-8.col-lg-12
+				.row.justify-content-sm-center.row-40
+					.col-sm-10.col-lg-4.text-left.order-lg-3.inset-lg-left-50
+						h6 Newsletter
+						hr.text-subline
+
+						p.text-white-70 Enter your email address to receive up-to-date news, new patient information and other useful stuff, delivered right to your inbox.
+
+						+widget-form-subscribe-type-2("Your e-mail...", "form-output-global","text", true)
+
+					.col-sm-10.text-sm-left.col-lg-4.order-lg-2
+						h6 contact us
+						hr.text-subline
+
+						.text-center.text-xl-left
+							address.contact-info.d-md-inline-block.text-left
+								.p.unit.unit-spacing-xxs.flex-row
+									.unit-left
+										span.icon.icon-xxs.mdi.mdi-phone.text-white
+									.unit-body
+										a(href="tel:#").text-white-70 1-800-1234-567
+										span.text-white-70=', '
+										a(href="tel:#").text-white-70 1-800-3214-321
+								.p.unit.flex-row.unit-spacing-xxs
+									.unit-left
+										span.icon.icon-xxs.mdi.mdi-map-marker.text-white
+									.unit-body
+										a(href="#").text-white-70 2130 Fulton Street San Diego, CA 94117-1080 USA
+								.p.unit.unit-spacing-xxs.flex-row.offset-top-16
+									.unit-left
+										span.icon.icon-xxs.mdi.mdi-email-outline.text-white
+									.unit-body
+										a.text-white-70(href="mailto:#").text-java info@demolink.org
+
+
+					.col-sm-10.col-lg-4.order-lg-1.text-center.text-lg-left
+						+logo
+
+						.offset-top-30
+							+widget-list-social([
+								{
+									"icon": "fa fa-facebook",
+									"href": "#"
+								},
+								{
+									"icon": "fa fa-twitter",
+									"href": "#"
+								},
+								{
+									"icon": "fa fa-google-plus",
+									"href": "#"
+								},
+								{
+									"icon": "fa fa-rss",
+									"href": "#"
+								}
+							],
+							'icon-xxs icon-circle icon-white')
+
+	.container.offset-top-50.offset-md-top-60
+		+rights

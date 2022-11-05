@@ -1,0 +1,22 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-pagination-classic
+include ../elements/_ui_post-modern-classic
+
+//- Title
+block variables
+	- pageName = 'Grid Gallery'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	include ../sections/_section-portfolio-grid-3-columns
+
+	// Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,109 @@
+//
+// Dividers
+// --------------------------------------------------
+
+
+// Hr
+// --------------------------------------------------
+
+.hr {
+  height: $hr-height;
+  padding: $hr-padding;
+  margin-top: $hr-offset-top;
+  margin-bottom: $hr-offset-bottom;
+  background: $gray-lighter;
+  border: none;
+}
+
+.hr-dashed{
+  height: $hr-dashed-height;
+  border-bottom: $hr-dashed-border-bottom;
+  background-color: $hr-dashed-background;
+}
+
+.hr-gradient{
+  @include divider-gradient($white, $gray);
+}
+
+// Text Subline
+// --------------------------------------------------
+
+.text-subline {
+  position: relative;
+  height: $text-subline-height;
+  padding: $text-subline-padding;
+  background: $text-subline-background;
+  margin-bottom: 22px;
+  border: none;
+
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  top: $text-subline-before-position-top;
+  //  left: $text-subline-before-position-left;
+  //  height: $text-subline-before-height;
+  //  width: $text-subline-before-width;
+  //  background: $text-subline-before-background;
+  //}
+}
+
+
+// Divider
+// --------------------------------------------------
+
+// Base Styles
+
+.divider{
+  width: $divider-width;
+  height: $divider-height;
+  padding: $divider-padding;
+  margin: $divider-offsets;
+  background: $divider-background;
+  border: none;
+}
+
+.divider-vertical {
+  width: $divider-vertical-width;
+  height: $divider-vertical-height;
+  background: $divider-vertical-background;
+  margin: 0 11px 0 0;
+  position: relative;
+  top: 5px;
+}
+
+// Sizing
+
+.divider-xs {
+  width: $divider-xs-width;
+  height: $divider-xs-height;
+  margin-top: 22px;
+}
+
+.divider-sm {
+  width: 50px;
+  height: $divider-lg-height;
+  margin: 15px auto 30px;
+}
+
+.divider-lg {
+  width: $divider-lg-width;
+  height: $divider-lg-height;
+  margin: 30px auto 30px;
+  
+  &.bg-accent{
+    background: #3b61b9;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .hr-sm-left-2 {
+    margin-left: 2px;
+  }
+}
+
+
+// Styles
+
+@include indent-responsive(hr, null, (margin-left, margin-right), (0: null, $screen-xs-min : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl), auto);
+@include indent-responsive(hr, left, margin-left, (0: null, $screen-xs-min : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl), 0);
+@include indent-responsive(hr, right, margin-right, (0: null, $screen-xs-min : xs, $screen-sm-min : sm, $screen-md-min : md, $screen-lg-min : lg, $screen-xl-min : xl), 0);

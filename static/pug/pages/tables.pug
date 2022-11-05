@@ -1,0 +1,63 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-tables
+include ../elements/_ui-table-bootstrap
+
+//- Title
+block variables
+	- pageName = 'Tables'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	section.section.section-md.bg-default.text-center
+		.container
+			+table-custom-2({
+				head: ['Column 1', 'Column 2', 'Column 3', 'Column 4'],
+				body: [
+					['Item #1', 'Description', 'Subtotal', '$3.00'],
+					['Item #2', 'Description', 'Discount', '$3.00'],
+					['Item #3', 'Description', 'Shipping', '$3.00'],
+					['Item #4', 'Description', 'Tax', '$4.00']
+				],
+				foot: ['All Items', 'Description', 'Your Total', '$13.00']
+			}).table-custom-secondary
+
+	hr
+
+	section.section.section-md.bg-default.text-center
+		.container
+			+table-custom-2({
+				head: ['Column 1', 'Column 2', 'Column 3', 'Column 4'],
+				body: [
+					['Item #1', 'Description', 'Subtotal', '$3.00'],
+					['Item #2', 'Description', 'Discount', '$3.00'],
+					['Item #3', 'Description', 'Shipping', '$3.00'],
+					['Item #4', 'Description', 'Tax', '$4.00']
+				],
+				foot: ['All Items', 'Description', 'Your Total', '$13.00']
+			}).table-custom-bordered
+
+	hr
+
+	section.section.section-md.bg-default.text-center
+		.container
+			+table-custom-2({
+				head: ['Column 1', 'Column 2', 'Column 3', 'Column 4'],
+				body: [
+					['Item #1', 'Description', 'Subtotal', '$3.00'],
+					['Item #2', 'Description', 'Discount', '$3.00'],
+					['Item #3', 'Description', 'Shipping', '$3.00'],
+					['Item #4', 'Description', 'Tax', '$4.00']
+				],
+				foot: ['All Items', 'Description', 'Your Total', '$13.00']
+			}).table-custom-striped.table-custom-primary
+
+	// Page Footer
+	include ../sections/_section-footer-default

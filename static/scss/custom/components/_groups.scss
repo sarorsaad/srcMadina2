@@ -1,0 +1,84 @@
+// Element groups
+// --------------------------------------------------
+
+
+/** @section Groups */
+
+html {
+	.group {
+		@include group(15px, 15px);
+	}
+	
+	.group-xs {
+		@include group(5px, 5px);
+	}
+	
+	.group-sm {
+		@include group(9px, 9px);
+	}
+	
+	.group-lg {
+		@include group(20px, 20px);
+	}
+	
+	.group-xl {
+		@include group(30px, 30px);
+	}
+	
+	.group-top {
+		> *, > *:first-child {
+			vertical-align: top;
+		}
+	}
+	
+	.group-middle {
+		> *, > *:first-child {
+			vertical-align: middle;
+		}
+	}
+	
+	.group-bottom {
+		> *, > *:first-child {
+			vertical-align: bottom;
+		}
+	}
+	
+	.group {
+		@include group(15px, 20px);
+	}
+	
+	.group-sm {
+		@include group(10px, 10px);
+	}
+	
+	.group-xl {
+		@include group(30px, 20px);
+		
+		@include media-breakpoint-up(lg) {
+			@include group-media(45px, 20px);
+		}
+	}
+	
+	.group-custom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		> * {
+			width: 100%;
+		}
+		
+		@include media-breakpoint-up(sm) {
+			flex-direction: row;
+		}
+	}
+}
+
+* + .group-sm {
+	margin-top: 30px;
+}
+
+* + .group-xl {
+	margin-top: 20px;
+}

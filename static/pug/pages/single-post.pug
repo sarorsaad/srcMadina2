@@ -1,0 +1,241 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+include ../elements/_ui-pagination-classic
+include ../elements/_ui_post-modern-classic
+
+//- Title
+block variables
+	- pageName = 'Single Post'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// Page Contents
+	section.section-lg.bg-default.section
+		.container
+			.row.justify-content-sm-center.justify-content-xl-end
+				.col-md-10.col-lg-8
+					h4.font-weight-bold.text-primary Picking the Right Diagnostic Services for Efficient Results
+					ul.list.list-inline.list-inline-dashed.offset-top-4
+						li July 2, 2021 at 4:10pm
+						li
+							='by'
+							a.text-primary(href= 'team-member.html')=' Amanda Wells'
+						li
+							a(href='blog-modern.html').text-primary Science
+					.offset-top-30
+						img.img-responsive.center-block(src="images/post-09-770x480.jpg" width="770" height="480" alt="")
+					div.offset-top-30
+						p Phasellus et lacus mattis, tincidunt metus sodales, tincidunt urna. Cras felis neque, iaculis vitae varius eu, luctus consectetur odio. However, this ideal is a dream, not reality, and a clever and profitable marketing ruse, not fact.
+						p Sed mollis, arcu et posuere cursus, massa neque viverra nisl, a condimentum urna justo ac neque. Phasellus id ante laoreet, viverra erat eget, luctus urna.
+						ul.list-marked.list
+							li Phasellus rhoncus felis ut justo laoreet
+							li Nulla volutpat, leo nec tempor tincidunt
+							li Sed tristique est quis urna sodales congue
+							li Nullam tempus elementum lacus
+							li Mauris sem enim, sagittis et lobortis sit amet
+							li Donec maximus velit vel dui placerat fringilla
+
+					.offset-top-30
+						img.img-responsive.center-block(src="images/post-11-770x480.jpg" width="770" height="480" alt="")
+					div.offset-top-30
+						p Nullam mollis ultrices est. Nulla in justo lacinia, scelerisque purus et, semper tortor. Donec bibendum leo vitae commodo porttitor. Proin tempus sollicitudin odio in feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices vitae nisl tristique commodo. Phasellus porttitor metus at mattis ultricies. In imperdiet nec nunc in tincidunt.
+						p Curabitur faucibus dolor at dui lobortis, eget dictum nisi mattis. Fusce risus dui, fringilla non elit sit amet, lobortis interdum eros. Donec mattis lectus quis elit fermentum lacinia. Nullam at ligula semper ante mollis pretium. Nam euismod velit ut quam accumsan vestibulum. Etiam diam augue, dapibus ac placerat nec, accumsan eget nibh. Cras sodales, leo ut volutpat laoreet, velit enim pharetra magna, at dapibus lacus elit vel mi. Nullam a massa ac ligula scelerisque maximus. Quisque dictum quis lorem ut sodales. Duis at semper odio. Morbi in sapien vel lacus posuere mattis ac eget ante. Etiam viverra accumsan rhoncus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+					.offset-top-30.offset-md-top-66
+						.row.row-20
+							.col-md-6
+								.tags.group.group-sm
+									a.btn-tag.btn.btn-default(href='#') Health
+									a.btn-tag.btn.btn-default(href='#') News
+									a.btn-tag.btn.btn-default(href='#') Tips
+
+							.col-md-6.text-md-right
+								div.d-inline-block.inset-right-20
+									p.text-dark Share:
+								ul.list-inline.list-inline-xs.d-inline-block.offset-top-14.offset-sm-top-0
+									li
+										a.icon.icon-xxs.icon-circle.icon-gray-light(href="#" class="fa fa-facebook")
+									li
+										a.icon.icon-xxs.icon-circle.icon-gray-light(href="#" class="fa fa-twitter")
+									li
+										a.icon.icon-xxs.icon-circle.icon-gray-light(href="#" class="fa fa-google-plus")
+									li
+										a.icon.icon-xxs.icon-circle.icon-gray-light(href="#" class="fa fa-rss")
+
+
+						div.offset-top-66
+							h6 posted by
+							hr.text-subline
+
+						.offset-top-30
+							.unit.unit-xs.flex-sm-row
+								.unit-left
+									img.rounded-circle.img-responsive.center-block(src="images/users-amanda-wells-170x170.jpg" width="170" height="170" alt="")
+								.unit-body.text-sm-left
+									div
+										h5
+											a(href="team-member.html") Amanda Wells
+									div.offset-top-4.offset-sm-top-8
+										.text-gray.font-italic Doctor, Blogger
+
+									div.offset-top-20.text-left
+										p Nullam mollis ultrices est. Nulla in justo lacinia, scelerisque purus et, semper tortor. Donec bibendum leo vitae commodo porttitor. Proin tempus sollicitudin odio in feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultrices vitae nisl tristique commodo. Phasellus porttitor metus at mattis ultricies. In imperdiet nec nunc in tincidunt.
+
+						div.offset-top-66
+							h6 recent blog posts
+							hr.text-subline
+						.row.offset-top-30
+							.col-md-6
+								+post-modern-classic({
+									"titleHref": 'single-post.html',
+									"title": "Reasons to Visit a Breast Specialist"
+								},
+									[
+										{
+											"metaHref": "#",
+											"metaTitle": "Health"
+										},
+										{
+											"metaHref": "#",
+											"metaTitle": "News"
+										},
+										{
+											"metaHref": "#",
+											"metaTitle": "ECG"
+										},
+									],
+									[
+										{
+											"listTitle": "June 21, 2021 at 8:12pm"
+										},
+										{
+											"listHref": 'blog-masonry.html',
+											"listClass": "",
+											"listTitle": "News"
+										}
+									],{
+									"type": "thumbnail",
+									"thumb": {"src": "images/post-16-370x240.jpg", "width": 370, "height": 240, "alt": ""},
+									"target": {"href": 'single-post.html'}
+								})
+									p Etiam et imperdiet quam. In sit amet finibus lorem, ac ultricies enim. Aliquam volutpat enim diam, vitae. Phasellus non luctus justo, eu fringilla tortor.
+
+							.col-md-6.offset-top-50.offset-sm-top-0
+								+post-modern-classic({
+									"titleHref": 'single-post.html',
+									"title": "Preparing for an ECG in 8 Easy Steps"
+								},
+									[
+										{
+											"metaHref": "#",
+											"metaTitle": "Health"
+										},
+										{
+											"metaHref": "#",
+											"metaTitle": "Road Trip"
+										},
+										{
+											"metaHref": "#",
+											"metaTitle": "ECG"
+										},
+									],
+									[
+										{
+											"listTitle": "June 21, 2021 at 8:12pm"
+										},
+										{
+											"listHref": 'blog-masonry.html',
+											"listClass": "",
+											"listTitle": "News"
+										}
+									],{
+									"type": "thumbnail",
+									"thumb": {"src": "images/post-17-370x240.jpg", "width": 370, "height": 240, "alt": ""},
+									"target": {"href": 'single-post.html'}
+								})
+									p Phasellus et lacus mattis, tincidunt metus sodales, tincidunt urna. Cras felis neque, iaculis vitae varius eu, luctus consectetur odio.
+
+						div.offset-top-66
+							h6 comments
+							hr.text-subline
+
+						.offset-top-30
+							// Box Comment
+							.box-comment.text-left
+								.unit.flex-row.unit-spacing-xs
+									.unit-left
+										img.rounded-circle.img-responsive.center-block(src="images/users/user-betty-wade-60x60.jpg" width="60" height="60" alt="")
+									.unit-body
+										div.d-sm-inline-block
+											a(href="team-member.html").font-weight-bold.text-primary Betty Wade
+										div.d-sm-inline-block.inset-sm-left-20
+											p.text-gray-dark June 21, 2021 at 8:12pm
+
+										div.offset-top-10
+											p Curabitur faucibus dolor at dui lobortis, eget dictum nisi mattis. Fusce risus dui, fringilla non elit sit amet, lobortis interdum eros. Donec mattis lectus quis elit fermentum lacinia. Nullam at ligula semper ante mollis pretium. Nam euismod velit ut quam accumsan vestibulum. Etiam diam augue, dapibus ac placerat nec, accumsan eget nibh.
+
+										div.offset-top-8
+											a.text-primary(href='#')
+												span.icon.text-middle.icon.icon-xxs.fa.fa-mail-reply.text-primary.inset-right-10(style="font-size: 18px;")
+												span.text-middle Reply
+
+								.inset-left-20.inset-md-left-70.offset-top-41
+									.unit.flex-row.unit-spacing-xs
+										.unit-left
+											img.rounded-circle.img-responsive.center-block(src="images/users/user-amanda-wells-90x90.jpg" width="60" height="60" alt="")
+										.unit-body
+											div.d-sm-inline-block
+												a(href="team-member.html").font-weight-bold.text-primary Amanda Wells
+											div.d-sm-inline-block.inset-sm-left-20
+												p.text-gray-dark June 21, 2021 at 8:12pm
+
+											div.offset-top-10
+												p Nullam a massa ac ligula scelerisque maximus.
+
+											div.offset-top-8
+												a.text-primary(href='#')
+													span.icon.text-middle.icon.icon-xxs.fa.fa-mail-reply.text-primary.inset-right-10(style="font-size: 18px;")
+													span.text-middle Reply
+
+						div.offset-top-60
+							h6 Send a Comment
+							hr.text-subline
+
+						.offset-top-20
+							// RD Mailform
+							form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+								.row.justify-content-sm-center
+									.col-md-6
+										.form-wrap.form-wrap-label-outside
+											label.form-label.form-label-outside.text-dark(for="single-post-first-name") First name
+											input#single-post-first-name.form-input(type="text" name="first-name" data-constraints="@Required")
+										.form-wrap.form-wrap-label-outside.offset-top-20
+											label.form-label.form-label-outside.text-dark(for="single-post-email") E-mail
+											input#single-post-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									.col-md-6.offset-top-20.offset-sm-top-0
+										.form-wrap.form-wrap-label-outside
+											label.form-label.form-label-outside.text-dark(for="single-post-last-name") Last name
+											input#single-post-last-name.form-input(type="text" name="last-name" data-constraints="@Required")
+										.form-wrap.form-wrap-label-outside.offset-top-20
+											label.form-label.form-label-outside.text-dark(for="single-post-phone") Phone
+											input#single-post-phone.form-input(type="text" name="last-name" data-constraints="@IsNumeric @Required")
+								.form-wrap.form-wrap-label-outside.offset-top-20
+									label.form-label.form-label-outside.text-dark(for="single-post-message") Message
+									textarea#single-post-message.form-input(name="message" data-constraints="@Required" style="max-height: 150px;")
+								.offset-top-20.text-center.text-md-left
+									button(type="submit" ).btn.btn-ellipse.btn-primary submit
+
+				.col-md-10.col-lg-4.offset-top-66.offset-md-top-0
+					.blog-grid-sidebar.inset-xxl-left-30
+						include ../sections/_section-sidebar
+
+
+	// Page Footer
+	include ../sections/_section-footer-default

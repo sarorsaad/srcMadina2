@@ -1,0 +1,57 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumb-modern
+
+//- Title
+block variables
+	- pageName = 'Departments'
+
+//- Page
+block page
+
+	include ../sections/_header-subpage
+
+	+breadcrumbs
+
+	// Page Content
+	section.section.section-lg.p-md-0
+		.container
+			.row.justify-content-sm-center.justify-content-md-start
+				.col-sm-10.col-md-6.section-image-aside.section-image-aside-right.text-center.text-md-left
+					.section-image-aside-img.d-none.d-md-block(style="background-image: url(images/departments-01-960-611.jpg)")
+					.section-image-aside-body.section-sm-bottom-66.section-sm-top-110.inset-lg-right-93
+						h3 Clinical Laboratory
+						.offset-top-34.offset-md-top-60
+							p Sed rutrum, mi sit amet fringilla feugiat, nunc magna ullamcorper lectus, ac congue nisi est ac orci.
+							p Curabitur ultrices, nunc eu maximus tristique, purus ex ullamcorper lacus, vel scelerisque lectus libero sit amet odio. Duis vel enim in erat vulputate tincidunt eu sed nisi. Aenean vehicula, dui at convallis laoreet.
+						.offset-top-30
+							a(href="#").btn.btn-ellipse.btn-primary Learn more
+
+			.row.justify-content-sm-center.justify-content-md-end.offset-top-0
+				.col-sm-10.col-md-6.section-image-aside.section-image-aside-left.text-center.text-md-left
+					.section-image-aside-img.d-none.d-md-block(style="background-image: url('images/departments-02-960-611.jpg')")
+					.section-image-aside-body.offset-top-66.offset-sm-top-0.section-sm-bottom-66.section-sm-top-110.inset-lg-left-93
+						h3 Best Equipment
+						.offset-top-34.offset-md-top-60
+							p Aenean ut felis risus. Suspendisse sed eros urna. Cras euismod vel pretium. Phasellus tincidunt sit amet tellus eu gravida. Cras tempor, justo non lacinia laoreet, lorem orci facilisis sem, ac tristique eros metus sit amet nulla. Praesent ultricies nunc neque, quis fermentum velit hendrerit id.
+						.offset-top-30
+							a(href="#").btn.btn-ellipse.btn-primary Learn more
+
+			.row.justify-content-sm-center.justify-content-md-start.offset-top-0
+				.col-sm-10.col-md-6.section-image-aside.section-image-aside-right.text-center.text-md-left
+					.section-image-aside-img.d-none.d-md-block(style="background-image: url(images/departments-03-960-611.jpg)")
+					.section-image-aside-body.offset-top-66.offset-sm-top-0.section-sm-bottom-66.section-sm-top-110.inset-lg-right-93
+						h3
+							| Nuclear Medicine &
+							br.d-none.d-lg-block
+							=' Radiology'
+						.offset-top-34.offset-md-top-60
+							p Sed rutrum, mi sit amet fringilla feugiat, nunc magna ullamcorper lectus, ac congue nisi est ac orci. Integer posuere scelerisque efficitur. Curabitur ultrices, nunc eu maximus tristique.
+						.offset-top-30
+							a(href="#").btn.btn-ellipse.btn-primary Learn more
+
+
+
+	// Page Footer
+	include ../sections/_section-footer-default
